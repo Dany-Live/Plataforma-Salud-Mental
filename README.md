@@ -1,3 +1,37 @@
+****************************************************************************************************
+////////////////////////////////INSTALACIÓN Y EJECUCIÓN DEL PROYECTO////////////////////////////////
+****************************************************************************************************
+
+----------CONSIDERACIONES----------
+
+* Antes de instalar y ejecutar el proyecto es necesario contar con los siguientes programas instalados:
+	
+	1. Maven: https://maven.apache.org/download.cgi
+	2. JDK: https://www.oracle.com/java/technologies/downloads/
+	3. Visual Studio Code: https://code.visualstudio.com/
+	4. TomCat: https://tomcat-apache-org.translate.goog/download-90.cgi?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc
+	5. Git: https://git-scm.com/downloads
+
+NOTA: En el caso de este proyecto las versiones utilizadas en el caso de Git y Visual Studio Code no se requiere de una versión especifica o necesaria.
+Pero para los demás las versiones son:
+	* Maven - versión 3.9.9
+	* JDK - versión 24.0.1
+	* TomCat - versión 9.0.104
+
+----------------------------------------------------------------------------------------------------
+///////////////////////////////////////////////MAVEN////////////////////////////////////////////////
+----------------------------------------------------------------------------------------------------
+
+----------AGREGAR MAVEN EN WINDOWS----------
+
+1. Primero debe descargarse Maven desde la página oficial colocado en el enlace anterior.
+2. El archivo descargado debe ser un archivo zip con la carpeta bin
+3. Descomprimir el archivo y colocarlo en alguna ruta o carpeta fácil de acceder: Disco Local, una carpeta, etc.
+4. Una vez colocado el archivo en la ruta, buscar en el explorador de windows las variables de entorno del sistema.
+5. Dentro de la ventana dar click en "variables de entorno".
+6. En la nueva ventana dentro de "variables del sistema" dar click en "Nuevo" y crear la variable M2_HOME y colocar la ruta del programa Maven y guardar.
+7. En la ventana "variables de usuario" dar click en la variable "path" y crear una nueva ruta y colocar: %M2_HOME%\bin
+8. Después guardar todos los cambios y abrir una terminal cmd y colocar: mvn -v
 
 ----------------------------------------------------------------------------------------------------
 ////////////////////////////////////////////////////////////////////////////////////////////////////
