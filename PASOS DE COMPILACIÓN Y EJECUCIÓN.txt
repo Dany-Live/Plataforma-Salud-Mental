@@ -1,0 +1,9 @@
+****************************************************************************************************
+//////////////////////////////////PASOS DE COMPILACIÓN Y EJECUCIÓN//////////////////////////////////
+****************************************************************************************************
+
+******Abrir una terminal dentro de la carpeta: salud-mental*****
+
+1. PRIMERO EJECUTAR: mvn clean package
+
+2. UNA VEZ COMPILADO COPIAR EL ARCHIVO: salud-mental.war ; Dentro de la carpeta de tomcat: [tomcat9]/webapps
