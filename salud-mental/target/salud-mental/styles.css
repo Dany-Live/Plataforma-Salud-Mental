@@ -1,0 +1,8 @@
+.container
+{ 
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    
+}
+body{ background-image: url('/salud-mental/images/FONDO-PRINCIPAL.jpg') }
