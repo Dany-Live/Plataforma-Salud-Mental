@@ -1,8 +1,54 @@
+@font-face 
+{
+    font-family: 'FuentePersonal';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .container
-{ 
+{
+    padding-top: 10px;
     display: grid;
     justify-content: center;
-    grid-template-columns: auto auto auto;
-    
+    grid-template-columns: 900px auto auto auto auto;
+    /*border: 1px solid red;*/
+    gap: 15px;
 }
-body{ background-image: url('/salud-mental/images/FONDO-PRINCIPAL.jpg') }
+button
+{ 
+    font-family: 'FuentePersonal';
+    font-size: 30px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+body
+{ 
+    font-family: 'FuentePersonal';
+    background-image: url('/salud-mental/images/FONDO-PRINCIPAL.jpg');
+    background-repeat: no-repeat;
+    background-size: 1920px 960px;
+}
+.textoBienvenida
+{  
+    position: absolute;
+    left: 1090px;
+    top: 350px;
+    font-size: 70px;
+}
+footer 
+{ 
+    font-family: 'FuentePersonal';
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 920px;
+    left: 0px;
+    width: 1920px;
+}
