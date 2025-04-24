@@ -14,6 +14,7 @@
     /*border: 1px solid red;*/
     gap: 15px;
 }
+/*.container div { border: 1px solid blue; }*/
 button
 { 
     font-family: 'FuentePersonal';
@@ -31,6 +32,7 @@ body
 { 
     font-family: 'FuentePersonal';
     background-image: url('/salud-mental/images/FONDO-PRINCIPAL.jpg');
+    background-color: red;
     background-repeat: no-repeat;
     background-size: 1920px 960px;
 }
@@ -51,4 +53,9 @@ footer
     top: 920px;
     left: 0px;
     width: 1920px;
+}
+a
+{
+    text-decoration: none;
+    color: inherit;
 }
