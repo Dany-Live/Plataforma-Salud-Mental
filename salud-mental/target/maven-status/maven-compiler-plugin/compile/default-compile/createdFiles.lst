@@ -1,1 +1,3 @@
+com\example\servlets\RegistroServlet.class
+com\example\servlets\DatabaseUtil.class
 com\example\servlets\SaludMentalServlet.class

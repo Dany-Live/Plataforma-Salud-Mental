@@ -14,4 +14,13 @@
         <servlet-name>SaludMentalServlet</servlet-name>
         <url-pattern>/api/salud</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegistroServlet</servlet-name>
+        <servlet-class>com.example.servlets.RegistroServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistroServlet</servlet-name>
+        <url-pattern>/registro</url-pattern>
+    </servlet-mapping>
 </web-app>
