@@ -1,0 +1,66 @@
+body { margin: 0; font-family: 'FuentePersonal';}
+@font-face 
+{
+    font-family: 'FuentePersonal';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.container
+{
+    position: absolute;
+    left: -25px;
+    top: 0px;
+}
+.container2
+{
+    position: absolute;
+    left: 1280px;
+    top: 530px;
+}
+.container3
+{
+    position: absolute;
+    left: 500px;
+    top: 300px;
+}
+.container4
+{
+    position: absolute;
+    left: 1000px;
+    top: 300px;
+}
+.container5
+{
+    padding-top: 80px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    font-size: 70px;
+}
+.container6
+{
+    position: absolute;
+    left: 600px;
+    top: 600px;
+    font-size: 30px;
+}
+.container7
+{
+    position: absolute;
+    left: 1030px;
+    top: 600px;
+    font-size: 30px;
+}
+.container8
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 40px;
+    top: 850px;
+}
+a 
+{
+    color: inherit;
+}
