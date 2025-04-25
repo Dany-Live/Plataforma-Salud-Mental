@@ -1,0 +1,121 @@
+@font-face 
+{
+    font-family: 'FuentePersonal';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body { margin: 0; font-family: 'FuentePersonal';}
+.container
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 10px 100px;
+    font-size: 25px;
+    position: absolute;
+    left: 80px;
+    top: 300px;
+}
+.tituloCuenta
+{
+    padding-top: 80px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    font-size: 70px;
+}
+input
+{
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
+}
+.container2
+{
+    position: absolute;
+    left: 1380px;
+    top: 20px;
+}
+.container3
+{
+    position: absolute;
+    left: 1300px;
+    top: 492px;
+}
+.container4
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 50px 100px;
+    font-size: 25px;
+    position: absolute;
+    left: 80px;
+    top: 492px;
+}
+.container5
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 50px 100px;
+    font-size: 25px;
+    position: absolute;
+    left: 80px;
+    top: 650px;
+}
+button
+{ 
+    font-family: 'FuentePersonal';
+    font-size: 40px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+.container6
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 180px auto;
+    position: absolute;
+    left: 300px;
+    top: 780px;
+    font-size: 20px;
+}
+#terminosycondiciones
+{
+    padding-top: 6px;
+}
+.container7
+{
+    position: absolute;
+    left: 640px;
+    top: 840px;
+}
+.container8
+{
+    position: absolute;
+    left: 645px;
+    top: 910px;
+}
+.container9
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 40px;
+    top: 80px;
+}
+a 
+{
+    color: inherit;
+}
