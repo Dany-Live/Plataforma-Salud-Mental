@@ -1,0 +1,22 @@
+CREATE DATABASE salud_mental;
+USE salud_mental;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    telefono VARCHAR(10) NOT NULL,
+    institucion VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    contrasena VARCHAR(100) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+DROP DATABASE nombre_base_datos;
+SHOW DATABASES;
+SHOW TABLES;
+SELECT * FROM usuarios;
+
+http://localhost:8080/salud-mental/
