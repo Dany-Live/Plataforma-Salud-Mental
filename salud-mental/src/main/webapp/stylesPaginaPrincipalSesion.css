@@ -1,0 +1,85 @@
+/*
+    * Hoja de estilos de: paginaPrincipalSesion.html
+*/
+
+/*Agregar fuente personalizada*/
+@font-face
+{
+    font-family: 'FuentePrincipal';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Estilo del body*/
+body 
+{
+    position: absolute;
+    margin: 0px;
+    font-family: 'FuentePrincipal';
+    background-image: url('/salud-mental/images/FONDO-PRINCIPAL-SESION.png');
+    background-repeat: no-repeat;
+}
+
+/*Estilo del encabezando utilizando grid*/
+.contenedorEncabezado
+{
+    padding-top: 10px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 20px;
+}
+
+/*Estilo de las opciones de los botones*/
+#opcion { padding-top: 20px; }
+
+/*Estilo del logos*/
+#logo 
+{ 
+    padding-left: 30px;
+    padding-right: 820px; 
+}
+
+/*Estilo de los botones*/
+button
+{
+    font-size: 30px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 20px 0px 20px;
+}
+
+/*Estilo del texto de bienvenida*/
+.textoBienvenida
+{  
+    position: absolute;
+    font-size: 50px;
+    left: 400px;
+    top: 850px;
+}
+
+/*Estilo del footer*/
+footer 
+{
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    position: absolute;
+    top: 920px;
+    left: 0px;
+    padding-left: 1890px;
+}
+
+/*Estilo del anlcaje URL*/
+a 
+{
+    text-decoration: none;
+    color: inherit;
+}

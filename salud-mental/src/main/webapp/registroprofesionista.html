@@ -1,76 +1,91 @@
+<!-- Página principal de inicio: registroProfesional.html -->
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud Mental</title>
     <link rel="stylesheet" href="stylesRegistroProfesionistas.css">
+    <script src="scriptIndex.js" defer></script>
 </head>
+
 <body>
-    <div class="tituloCuenta">CREA UNA CUENTA</div>
-    <div class="container">
-        <div>
-            <label>NOMBRES(S)</label>
-            <br>
-            <input type="text" placeholder="" name="nombre" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{4,50}" required>
+    <form action="">
+        <!-- CABECERA DE LA PÁGINA -->
+        <div class="cabeceraEstudiante">
+            <div class="titulo">CREA UNA CUENTA</div>
+            <div class="logoSuperior"><img src="/salud-mental/images/PRIMER-LOGO-REGISTRO.webp" alt="imagenregistro1" width="434px" height="300px"></div>
         </div>
-        <div>
-            <label>APELLIDIO(S)</label>
-            <br>
-            <input type="text" placeholder="" name="apellido" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{10,50}" required>
-        </div>
-        <div>
-            <label>INSTITUCIÓN</label>
-            <br>
-            <input type="text" placeholder="" name="instituto" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]{5,50}" required>
-        </div>
-    </div>
 
-    <div class="container4">
-        <div>
-            <label>FECHA DE NACIMIENTO</label>
-            <br>
-            <input type="date" placeholder="" name="fechanacimiento" required>
-        </div>
-        <div>
-            <label>NÚMERO CELULAR</label>
-            <br>
-            <input type="tel" placeholder="" name="numeromovil" pattern="[0-9]{10}" maxlength="10" required>
-        </div>
-        <div>
-            <label>CÉDULA PROFESIONAL</label>
-            <br>
-            <input type="text" placeholder="" name="cedula" required>
-        </div>
-    </div>
-    
-    <div class="container5">
-        <div>
-            <label>CORREO</label>
-            <br>
-            <input type="email" placeholder="" name="correo" required>
-        </div>
-        <div>
-            <label>CONTRASEÑA</label>
-            <br>
-            <input type="password" placeholder="" name="contraseña" minlength="8" maxlength="20" required>
-        </div>
-        <div>
-            <label>PROFESIÓN</label>
-            <br>
-            <input type="text" placeholder="" name="profesion" required>
-        </div>
-    </div>
+        <!-- ICONO INFERIOR DERECHO -->
+        <div class="logoInferior"><img src="/salud-mental/images/SEGUNDO-LOGO-REGISTRO.jpg" alt="imagenregistro2" width="412px" height="263px"></div>
 
-    <div class="container2"><img src="/salud-mental/images/PRIMER-LOGO-REGISTRO.webp" alt="imagenregistro1"></div>
-    <div class="container3"><img src="/salud-mental/images/SEGUNDO-LOGO-REGISTRO.jpg" alt="imagenregistro2"></div>
+        <!-- ENTRADA DE DATOS: NOMBRES, APELLIDOS E INSTITUTO -->
+        <div class="primerosDatos">
+            <div>
+                <label>NOMBRES(S)</label>
+                <br>
+                <input type="text" placeholder="" name="nombre" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{4,50}" required>
+            </div>
+            <div>
+                <label>APELLIDIO(S)</label>
+                <br>
+                <input type="text" placeholder="" name="apellido" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{10,50}" required>
+            </div>
+            <div>
+                <label>INSTITUCIÓN</label>
+                <br>
+                <input type="text" placeholder="" name="instituto" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]{5,50}" required>
+            </div>
+        </div>
 
-    <div class="container6">
-        <div><input type="checkbox" required></div>
-        <div id="terminosycondiciones">Al crear la cuenta acepto los Terminos & Condiciones</div>
-    </div>
+        <div class="segundosDatos">
+            <div>
+                <label>FECHA DE NACIMIENTO</label>
+                <br>
+                <input type="date" placeholder="" name="fechanacimiento" required>
+            </div>
+            <div>
+                <label>NÚMERO CELULAR</label>
+                <br>
+                <input type="tel" placeholder="" name="numeromovil" pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+            <div>
+                <label>CÉDULA PROFESIONAL</label>
+                <br>
+                <input type="text" placeholder="" name="cedula" required>
+            </div>
+        </div>
 
-    <div class="container7"><button>CREAR CUENTA</button></div>
-    <div class="container8">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></div>
-    <div class="container9"><a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
+        <div class="tercerosDatos">
+            <div>
+                <label>CORREO</label>
+                <br>
+                <input type="email" placeholder="" name="correo" required>
+            </div>
+            <div>
+                <label>CONTRASEÑA</label>
+                <br>
+                <input type="password" placeholder="" name="contrasena" minlength="8" maxlength="20" required>
+            </div>
+        </div>
+
+        <div class="aceptacionDeTerminos">
+            <div><input type="checkbox" required></div>
+            <div id="terminosycondiciones">Al crear la cuenta acepto los Terminos & Condiciones</div>
+        </div>
+
+        <div class="crearCuenta"><button type="submit">CREAR CUENTA</button></div>
+
+        <div class="inicioDeSesion">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></div>
+
+        <div class="iconoRegreso"><a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
+
+        <!-- SCRIPT PARA DETECTAR EL TAMAÑO DE LA PAGINA HTML -->
+        <p id="size"></p>
+    </form>
 </body>
+
 </html>

@@ -1,14 +1,29 @@
+<!-- Página principal de inicio: registroEstudiante.html -->
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud Mental</title>
     <link rel="stylesheet" href="stylesRegistroEstudiantes.css">
+    <script src="scriptIndex.js" defer></script>
 </head>
+
 <body>
     <form action="/salud-mental/registro" method="POST">
-        <div class="tituloCuenta">CREA UNA CUENTA</div>
-        <div class="container">
+        <!-- CABECERA DE LA PÁGINA -->
+        <div class="cabeceraEstudiante">
+            <div class="titulo">CREA UNA CUENTA</div>
+            <div class="logoSuperior"><img src="/salud-mental/images/PRIMER-LOGO-REGISTRO.webp" alt="imagenregistro1" width="434px" height="300px"></div>
+        </div>
+
+        <!-- ICONO INFERIOR DERECHO -->
+        <div class="logoInferior"><img src="/salud-mental/images/SEGUNDO-LOGO-REGISTRO.jpg" alt="imagenregistro2" width="412px" height="263px"></div>
+
+        <!-- ENTRADA DE DATOS: NOMBRES y APELLIDOS -->
+        <div class="primerosDatos">
             <div>
                 <label>NOMBRES(S)</label>
                 <br>
@@ -21,7 +36,7 @@
             </div>
         </div>
 
-        <div class="container4">
+        <div class="segundosDatos">
             <div>
                 <label>FECHA DE NACIMIENTO</label>
                 <br>
@@ -38,8 +53,8 @@
                 <input type="text" placeholder="" name="instituto" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]{5,50}" required>
             </div>
         </div>
-        
-        <div class="container5">
+
+        <div class="tercerosDatos">
             <div>
                 <label>CORREO</label>
                 <br>
@@ -52,17 +67,20 @@
             </div>
         </div>
 
-        <div class="container2"><img src="/salud-mental/images/PRIMER-LOGO-REGISTRO.webp" alt="imagenregistro1"></div>
-        <div class="container3"><img src="/salud-mental/images/SEGUNDO-LOGO-REGISTRO.jpg" alt="imagenregistro2"></div>
-
-        <div class="container6">
+        <div class="aceptacionDeTerminos">
             <div><input type="checkbox" required></div>
             <div id="terminosycondiciones">Al crear la cuenta acepto los Terminos & Condiciones</div>
         </div>
 
-        <div class="container7"><button type="submit">CREAR CUENTA</button></div>
-        <div class="container8">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></div>
-        <div class="container9"><a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
+        <div class="crearCuenta"><button type="submit">CREAR CUENTA</button></div>
+
+        <div class="inicioDeSesion">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></div>
+
+        <div class="iconoRegreso"><a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
+
+        <!-- SCRIPT PARA DETECTAR EL TAMAÑO DE LA PAGINA HTML -->
+        <p id="size"></p>
     </form>
 </body>
+
 </html>

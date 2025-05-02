@@ -1,32 +1,33 @@
+<!-- Página principal de inicio: index.html -->
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud Mental</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesIndex.css">
+    <script src="scriptIndex.js" defer></script>
 </head>
+
 <body>
-
-    <div class="container">
-        <div><img src="/salud-mental/images/LOGO-PAGINA.png" alt="Logo" width="253px" height="226px"></div>
-        <div><button onclick="fetchData()">INFORMACIÓN</button></div>
-        <div><button>CONTACTOS</button></div>
-        <div><button><a href="seleccioncuenta.html">REGISTRARSE</a></button></div>
-        <div><button><a href="login.html">MI CUENTA</a></button></div>
+    <!-- CABECERA -->
+    <div class="contenedorEncabezado">
+        <div id="logo"><img src="/salud-mental/images/LOGO-PAGINA.png" alt="Logo" width="253px" height="226px"></div>
+        <div id="opcion"><button>INFORMACIÓN</button></div>
+        <div id="opcion"><button>CONTACTOS</button></div>
+        <div id="opcion"><button><a href="seleccionCuenta.html">REGISTRARSE</a></button></div>
+        <div id="opcion"><button><a href="login.html">MI CUENTA</a></button></div>
     </div>
-    <div class="textoBienvenida"><center>Tu Bienestar Es Nuestra Prioridad</center></div>
-    <footer>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;©</footer>
-    
-    <div id="result"></div>
 
-    <script>
-        async function fetchData() 
-        {
-            const response = await fetch('api/salud');
-            const text = await response.text();
-            document.getElementById('result').innerHTML = text;
-        }
-    </script>
-    
+    <!-- TEXTO DE BIENVENIDA -->
+    <div class="textoBienvenida"><center>Tu Bienestar Es Nuestra Prioridad</center></div>
+
+    <footer>©</footer>
+
+    <!-- SCRIPT PARA DETECTAR EL TAMAÑO DE LA PAGINA HTML -->
+    <p id="size"></p>
 </body>
+
 </html>

@@ -1,66 +1,78 @@
-body { margin: 0; font-family: 'FuentePersonal';}
-@font-face 
+/*
+    * Hoja de estilos de: seleccionCuenta.html
+*/
+
+/*Agregar fuente personalizada*/
+@font-face
 {
-    font-family: 'FuentePersonal';
+    font-family: 'FuentePrincipal';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-.container
+
+/*Estilo del body*/
+body 
+{
+    margin: 0px;
+    font-family: 'FuentePrincipal';
+    position: absolute;
+}
+
+/*Estilo del titulo de la página*/
+.tituloPagina
+{
+    font-size: 65px;
+    padding: 80px 0px 0px 300px;
+}
+
+/*Estilo del logo izquierdo*/
+.logoIzquierdo
 {
     position: absolute;
-    left: -25px;
-    top: 0px;
+    left: -40px;
+    top: -15px;
+    transform: rotate(180deg);
 }
-.container2
+
+/*Estilo del logo inferior derecho*/
+.logoInferiorDerecho
 {
     position: absolute;
-    left: 1280px;
-    top: 530px;
+    left: 1298px;
+    top: 548px;
 }
-.container3
+
+/*Estilo del logo inferior izquierdo*/
+.logoInferiorIzquierdo
 {
     position: absolute;
-    left: 500px;
-    top: 300px;
+    left: -35px;
+    top: 602px;
 }
-.container4
+
+/*Estilo del tipo de cuenta*/
+.tipoDeCuenta
 {
-    position: absolute;
-    left: 1000px;
-    top: 300px;
-}
-.container5
-{
-    padding-top: 80px;
+    padding: 100px 0px 0px 290px;
     display: grid;
     justify-content: center;
-    grid-template-columns: auto;
-    font-size: 70px;
+    grid-template-columns: auto auto;
+    gap: 0px 100px;
 }
-.container6
-{
-    position: absolute;
-    left: 600px;
-    top: 600px;
-    font-size: 30px;
-}
-.container7
-{
-    position: absolute;
-    left: 1030px;
-    top: 600px;
-    font-size: 30px;
-}
-.container8
+
+/*Estilos de las etiquetas*/
+.etiquetaAlumno, .etiquetaProfesionista { font-size: 30px; }
+
+/*Estilo del icono de regreso*/
+.iconoRegreso
 {
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    left: 40px;
+    left: 920px;
     top: 850px;
 }
-a 
-{
-    color: inherit;
-}
+
+/*Estilo del anclaje URL*/
+a { color: inherit; }

@@ -1,0 +1,118 @@
+/*
+    * Hoja de estilos de: recuperarCuenta.html
+*/
+
+/*Agregar fuente personalizada*/
+@font-face
+{
+    font-family: 'FuentePrincipal';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Estilo del body*/
+body 
+{
+    position: absolute;
+    margin: 0px;
+    font-family: 'FuentePrincipal';
+}
+
+/*Estilo del logo izquierdo1*/
+.logoIzquierdo1
+{
+    position: absolute;
+    left: -40px;
+    top: -15px;
+    transform: rotate(180deg);
+}
+
+/*Estilo del logo izquierdo2*/
+.logoIzquierdo2
+{
+    position: absolute;
+    left: 1568px;
+    top: 630px;
+    transform: rotate(0deg);
+}
+
+/*Estilo del logo inferior izquierdo*/
+.logoInferiorIzquierdo
+{
+    position: absolute;
+    left: 0px;
+    top: 500px;
+}
+
+/*Estilo del footer*/
+footer 
+{
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    position: absolute;
+    top: 920px;
+    left: 0px;
+    padding-left: 1890px;
+}
+
+/*Estilo del titulo de la página*/
+.tituloPagina
+{
+    font-size: 65px;
+    padding: 80px 0px 0px 560px;
+}
+
+/*Estilo de la caja de texto del correo*/
+.textoCorreo
+{  
+    position: absolute;
+    left: 590px;
+    top: 250px;
+    font-size: 25px;
+}
+
+/*Estilo de las entradas de datos*/
+input
+{
+    width: 700px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+/*Estilo del boton de sesion*/
+.botonDeSesion
+{
+    position: absolute;
+    left: 840px;
+    top: 500px;
+}
+
+/*Estilo del boton*/
+button
+{ 
+    font-size: 40px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 25px 0px 25px;
+}
+
+/*Estilo del icono de regreso*/
+.regresoPagina
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 900px;
+    top: 800px;
+}

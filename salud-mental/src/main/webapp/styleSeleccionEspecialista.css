@@ -1,0 +1,127 @@
+/*
+    * Hoja de estilos de: stylesLogin.html
+*/
+
+/*Agregar fuente personalizada*/
+@font-face
+{
+    font-family: 'FuentePrincipal';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Estilo del body*/
+body 
+{
+    margin: 0px;
+    font-family: 'FuentePrincipal';
+}
+
+.cabeceraPagina
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 30px;
+}
+
+.buscador { padding-top: 40px; }
+.iconoRegreso { padding-top: 25px; }
+.iconoUsuario { padding-top: 25px; }
+
+/*Estilo del logo izquierdo1*/
+.logoIzquierdo
+{
+    transform: rotate(180deg);
+}
+
+/*Estilo de las opciones de los botones*/
+#opcion { padding-top: 45px; }
+
+/*Estilo de los botones*/
+button
+{
+    font-size: 30px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 20px 0px 20px;
+}
+
+/*Estilo de las entradas de datos*/
+input
+{
+    width: 1120px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.especialistasIconos
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 0px 250px;
+}
+
+#subtexto { font-size: 30px; padding: 55px 50px 55px 50px; }
+
+.texto1
+{
+    color: white;
+    padding: 30px;
+    background-color: #261d60;
+    clip-path: inset(10% round 30px);
+}
+
+.texto2
+{
+    color: white;
+    padding: 20px;
+    background-color: #3e4685;
+    clip-path: inset(10% round 30px);
+}
+
+.texto3
+{
+    color: white;
+    padding: 20px;
+    background-color: #3e7dcd;
+    clip-path: inset(10% round 30px);
+}
+
+/*Estilo del footer*/
+footer 
+{
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    position: absolute;
+    top: 920px;
+    left: 0px;
+    padding-left: 1890px;
+}
+
+/*Estilo del boton de sesion*/
+.botonDeCita
+{
+    position: absolute;
+    left: 830px;
+    top: 850px;
+}
+
+.logoInferiorDerecho
+{
+    position: absolute;
+    left: 1506px;
+    top: 650px;
+}

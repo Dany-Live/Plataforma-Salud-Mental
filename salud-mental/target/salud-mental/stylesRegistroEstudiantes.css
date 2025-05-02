@@ -1,12 +1,51 @@
-@font-face 
+/*
+    * Hoja de estilos de: registroEstudiante.html
+*/
+
+/*Agregar fuente personalizada*/
+@font-face
 {
-    font-family: 'FuentePersonal';
+    font-family: 'FuentePrincipal';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-body { margin: 0; font-family: 'FuentePersonal';}
-.container
+
+/*Estilo del body*/
+body 
+{
+    margin: 0px;
+    font-family: 'FuentePrincipal';
+    position: absolute;
+}
+
+/*Estilo de la cabecera*/
+.cabeceraEstudiante
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    font-size: 70px;
+    gap: 100px;
+    padding: 0px 0px 0px 650px;
+}
+
+/*Estilo del titulo*/
+.titulo { padding-top: 40px; }
+
+/*Estilo del logo superior*/
+.logoSuperior { padding-left: 100px; }
+
+/*Estilo del logo inferior*/
+.logoInferior
+{
+    position: absolute;
+    left: 1505px;
+    top: 690px;
+}
+
+/*Estilo de los primeros datos*/
+.primerosDatos
 {
     display: grid;
     justify-content: center;
@@ -14,17 +53,78 @@ body { margin: 0; font-family: 'FuentePersonal';}
     gap: 50px 100px;
     font-size: 25px;
     position: absolute;
-    left: 80px;
+    left: 200px;
     top: 300px;
 }
-.tituloCuenta
+
+/*Estilo de los segundos datos*/
+.segundosDatos
 {
-    padding-top: 80px;
     display: grid;
     justify-content: center;
-    grid-template-columns: auto;
-    font-size: 70px;
+    grid-template-columns: auto auto auto;
+    gap: 50px 100px;
+    font-size: 25px;
+    position: absolute;
+    left: 200px;
+    top: 492px;
 }
+
+/*Estilo de los terceros datos*/
+.tercerosDatos
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 50px 100px;
+    font-size: 25px;
+    position: absolute;
+    left: 200px;
+    top: 650px;
+}
+
+/*Estilo de la aceptación de terminos*/
+.aceptacionDeTerminos
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 180px auto;
+    position: absolute;
+    left: 300px;
+    top: 780px;
+    font-size: 20px;
+}
+
+/*Estilo de los terminios y condiciones*/
+#terminosycondiciones { padding-top: 6px; }
+
+/*Estilo de crear cuenta*/
+.crearCuenta
+{
+    position: absolute;
+    left: 640px;
+    top: 840px;
+}
+
+/*Estilo del inicio de sesión*/
+.inicioDeSesion
+{
+    position: absolute;
+    left: 645px;
+    top: 910px;
+}
+
+/*Estilo del icono de regreso*/
+.iconoRegreso
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+}
+
+/*Estilo de las entradas de datos*/
 input
 {
     width: 300px;
@@ -34,43 +134,10 @@ input
     padding-left: 10px;
     margin: 0px;
 }
-.container2
-{
-    position: absolute;
-    left: 1380px;
-    top: 20px;
-}
-.container3
-{
-    position: absolute;
-    left: 1300px;
-    top: 492px;
-}
-.container4
-{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto auto;
-    gap: 50px 100px;
-    font-size: 25px;
-    position: absolute;
-    left: 80px;
-    top: 492px;
-}
-.container5
-{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto;
-    gap: 50px 100px;
-    font-size: 25px;
-    position: absolute;
-    left: 80px;
-    top: 650px;
-}
+
+/*Estilo del boton*/
 button
-{ 
-    font-family: 'FuentePersonal';
+{
     font-size: 40px;
     background-color: #243386;
     color: white;
@@ -81,41 +148,6 @@ button
     cursor: pointer;
     padding: 0px 20px;
 }
-.container6
-{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 180px auto;
-    position: absolute;
-    left: 300px;
-    top: 780px;
-    font-size: 20px;
-}
-#terminosycondiciones
-{
-    padding-top: 6px;
-}
-.container7
-{
-    position: absolute;
-    left: 640px;
-    top: 840px;
-}
-.container8
-{
-    position: absolute;
-    left: 645px;
-    top: 910px;
-}
-.container9
-{
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 40px;
-    top: 80px;
-}
-a 
-{
-    color: inherit;
-}
+
+/*Estilo del enlace del URL*/
+a { color: inherit; }
