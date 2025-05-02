@@ -1,0 +1,142 @@
+/*
+    * Hoja de estilos de: paginaDeInformacion.html
+*/
+
+/*Agregar fuente personalizada*/
+@font-face
+{
+    font-family: 'FuentePrincipal';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Estilo del body*/
+body 
+{
+    position: absolute;
+    margin: 0px;
+    font-family: 'FuentePrincipal';
+}
+
+/*Estilo del encabezando utilizando grid*/
+.contenedorEncabezado
+{
+    padding-top: 10px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.cabeceraPagina
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 30px;
+}
+
+.buscador 
+{ 
+    padding-top: 40px;
+    padding-left: 280px;
+}
+.iconoRegreso { padding-top: 25px; }
+.iconoUsuario { padding-top: 25px; }
+
+/*Estilo de las opciones de los botones*/
+#opcion { padding-top: 45px; }
+
+/*Estilo de los botones*/
+button
+{
+    font-size: 30px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 20px 0px 20px;
+}
+
+/*Estilo de las entradas de datos*/
+input
+{
+    width: 1120px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.subTemas
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+}
+
+.textoDeInforme
+{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.actividadesInformativas
+{
+    display: grid;
+    justify-content: center;
+    position: absolute;
+    top: 550px;
+    left: 20px;
+}
+
+#textos
+{
+    text-align: center;
+    font-size: 30px;
+    background-color: #9ab7e9;
+    color: white;
+    clip-path: inset(10% round 30px);
+    padding: 20px 200px 20px 200px;
+}
+
+.numeroActividades
+{
+    display: grid;
+    justify-content: center;
+    position: absolute;
+    top: 550px;
+    left: 100px;
+}
+
+#numeros
+{
+    text-align: center;
+    font-size: 30px;
+    background-color: #6477a3;
+    color: white;
+    clip-path: inset(10% round 30px);
+    padding: 20px 30px 20px 30px;
+}
+
+.iconosPrincipales
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    position: absolute;
+    gap: 0px 100px;
+    top: 600px;
+    left: 980px;
+}
+
+#nombresIconosPrincipales
+{
+    text-align: center;
+}

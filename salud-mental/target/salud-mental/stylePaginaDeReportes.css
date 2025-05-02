@@ -1,0 +1,100 @@
+/*
+    * Hoja de estilos de: paginaDeReportes.html
+*/
+
+/*Agregar fuente personalizada*/
+@font-face
+{
+    font-family: 'FuentePrincipal';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Estilo del body*/
+body 
+{
+    margin: 0px;
+    font-family: 'FuentePrincipal';
+}
+
+.cabeceraDeReportes
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.titulo 
+{ 
+    font-size: 70px;
+    padding-top: 60px;
+}
+
+.iconoRegreso, .iconoUsuario
+{
+    padding-top: 60px;
+}
+
+/*Estilo del footer*/
+footer 
+{
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    position: absolute;
+    top: 920px;
+    left: 0px;
+    padding-left: 1890px;
+}
+
+.logoInferior
+{
+    position: absolute;
+    left: 1568px;
+    top: 630px;
+    transform: rotate(0deg);
+}
+
+.cajaDeComentarios
+{
+    position: absolute;
+    top: 250px;
+    left: 400px;
+}
+
+textarea 
+{
+    width: 1250px;
+    height: 350px;
+    outline: none;
+    border-radius: 10px;
+    border-color: black;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/*Estilo del boton de sesion*/
+.botonDeEnvion
+{
+    position: absolute;
+    top: 650px;
+    left: 400px;
+}
+
+/*Estilo del boton*/
+button
+{ 
+    font-size: 40px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 25px 0px 25px;
+}
