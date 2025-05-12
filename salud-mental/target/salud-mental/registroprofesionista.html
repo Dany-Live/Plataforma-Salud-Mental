@@ -1,4 +1,4 @@
-<!-- Página principal de inicio: registroProfesional.html -->
+<!-- Página para registrar los datos de los especialistas: registroProfesional.html -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,21 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud Mental</title>
     <link rel="stylesheet" href="stylesRegistroProfesionistas.css">
-    <script src="scriptIndex.js" defer></script>
 </head>
 
 <body>
+    <!-- TITULO DE LA PÁGINA -->
+    <div class="tituloPagina"><center>CREA UNA CUENTA</center></div>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <div class="logoSuperiorDerecho"><img src="/salud-mental/images/PRIMER-LOGO-REGISTRO.png" alt="imagenRegistro1"></div>
+
+    <!-- ICONO INFERIOR IZQUIERDO -->
+    <div class="logoInferiorIzquierdo"><img src="/salud-mental/images/SEGUNDO-LOGO-REGISTRO.jpg" alt="imagenRegistro2"></div>
+
+    <!-- FORMULARIO DE LA PÁGINA -->
     <form action="">
-        <!-- CABECERA DE LA PÁGINA -->
-        <div class="cabeceraEstudiante">
-            <div class="titulo">CREA UNA CUENTA</div>
-            <div class="logoSuperior"><img src="/salud-mental/images/PRIMER-LOGO-REGISTRO.webp" alt="imagenregistro1" width="434px" height="300px"></div>
-        </div>
-
-        <!-- ICONO INFERIOR DERECHO -->
-        <div class="logoInferior"><img src="/salud-mental/images/SEGUNDO-LOGO-REGISTRO.jpg" alt="imagenregistro2" width="412px" height="263px"></div>
-
-        <!-- ENTRADA DE DATOS: NOMBRES, APELLIDOS E INSTITUTO -->
+        <!-- ENTRADA DE DATOS: NOMBRES, APELLIDOS Y FECHA DE NACIMIENTO -->
         <div class="primerosDatos">
             <div>
                 <label>NOMBRES(S)</label>
@@ -30,23 +30,19 @@
                 <input type="text" placeholder="" name="nombre" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{4,50}" required>
             </div>
             <div>
-                <label>APELLIDIO(S)</label>
+                <label>APELLIDO(S)</label>
                 <br>
                 <input type="text" placeholder="" name="apellido" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{10,50}" required>
             </div>
-            <div>
-                <label>INSTITUCIÓN</label>
-                <br>
-                <input type="text" placeholder="" name="instituto" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]{5,50}" required>
-            </div>
-        </div>
-
-        <div class="segundosDatos">
             <div>
                 <label>FECHA DE NACIMIENTO</label>
                 <br>
                 <input type="date" placeholder="" name="fechanacimiento" required>
             </div>
+        </div>
+
+        <!-- ENTRADA DE DATOS: NÚMERO, CEDULA Y CORREO -->
+        <div class="segundosDatos">
             <div>
                 <label>NÚMERO CELULAR</label>
                 <br>
@@ -57,34 +53,49 @@
                 <br>
                 <input type="text" placeholder="" name="cedula" required>
             </div>
-        </div>
-
-        <div class="tercerosDatos">
             <div>
                 <label>CORREO</label>
                 <br>
                 <input type="email" placeholder="" name="correo" required>
+            </div>
+        </div>
+
+        <!-- ENTRADA DE DATOS: CONTRASEÑA Y SEXO -->
+        <div class="tercerosDatos">
+            <div>
+                <label>INSTITUCIÓN</label>
+                <br>
+                <input type="text" placeholder="" name="instituto" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]{5,50}" required>
             </div>
             <div>
                 <label>CONTRASEÑA</label>
                 <br>
                 <input type="password" placeholder="" name="contrasena" minlength="8" maxlength="20" required>
             </div>
+            <div class="sexoIndividuo">
+                <label>SEXO:</label>
+                <br>
+                <select id="selector" name="opcion" required>
+                    <option value="op1">Hombre</option>
+                    <option value="op2">Mujer</option>
+                </select>
+            </div>
         </div>
 
+        <!-- DATOS DE ACEPTACIÓN DE TERMINOS -->
         <div class="aceptacionDeTerminos">
-            <div><input type="checkbox" required></div>
-            <div id="terminosycondiciones">Al crear la cuenta acepto los Terminos & Condiciones</div>
+            <div class="casillaAceptacion"><input type="checkbox" class="casilla" required></div>
+            <div id="terminosycondiciones">Al crear la cuenta acepto los <u>Terminos & Condiciones</u></div>
         </div>
 
+        <!-- BOTON PARA CREAR LA CUENTA -->
         <div class="crearCuenta"><button type="submit">CREAR CUENTA</button></div>
 
+        <!-- OPCIÓN PARA INICIAR SESIÓN -->
         <div class="inicioDeSesion">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></div>
 
+        <!-- BOTON DE REGRESO -->
         <div class="iconoRegreso"><a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
-
-        <!-- SCRIPT PARA DETECTAR EL TAMAÑO DE LA PAGINA HTML -->
-        <p id="size"></p>
     </form>
 </body>
 

@@ -1,4 +1,4 @@
-<!-- Página principal de inicio: seleccionEspecialista.html -->
+<!-- Página para seleccionar y agendar la cita con el especialista: seleccionEspecialista.html -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,37 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud Mental</title>
     <link rel="stylesheet" href="styleSeleccionEspecialista.css">
-    <script src="scriptIndex.js" defer></script>
 </head>
 
 <body>
-
+    <!-- CABECERA DE LA PÁGINA -->
     <div class="cabeceraPagina">
-        <div class="logoIzquierdo"><img src="/salud-mental/images/DECORACION.png" alt="decoración1" width="250px" height="200px"></div>
+        <div class="logoIzquierdo"><img src="/salud-mental/images/DECORACION.png" alt="decoracion1"></div>
         <div class="buscador"><input type="text" name="query" placeholder="Buscar"></div>
-        <div class="iconoRegreso"><a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
+        <div class="iconoRegreso"><a href="paginaPrincipalSesion.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
         <div class="iconoUsuario"><a href=""><img src="/salud-mental/images/ICONO-USUARIO.png" alt="usuario" width="80px" height="80px"></a></div>
         <div id="opcion"><button>CONTACTOS</button></div>
     </div>
 
+    <!-- ESPECIALISTAS -->
     <div class="especialistasIconos">
-        <div><CEnter><img src="/salud-mental/images/ICONO-PSICOLOGO.png" alt="iconpsicologo" width="250px" height="250px"></CEnter></div>
-        <div><CEnter><img src="/salud-mental/images/ICONO-MEDICO-PRIMARIO.png" alt="iconmedico" width="250px" height="250px"></CEnter></div>
-        <div><CEnter><img src="/salud-mental/images/ICONO-TERAPEUTA.png" alt="iconterapeuta" width="250px" height="250px"></CEnter></div>
+        <div class="psicologo"><CEnter><img src="/salud-mental/images/ICONO-PSICOLOGO.gif" alt="iconpsicologo"></CEnter></div>
+        <div class="medico"><CEnter><img src="/salud-mental/images/ICONO-MEDICO-PRIMARIO.gif" alt="iconmedico"></CEnter></div>
+        <div class="terapeuta"><CEnter><img src="/salud-mental/images/ICONO-TERAPEUTA.gif" alt="iconterapeuta"></CEnter></div>
         <div id="subtexto" class="texto1"><CEnter>PSICÓLOGOS</CEnter></div>
         <div id="subtexto" class="texto2"><CEnter>MÉDICOS PRIMARIOS</CEnter></div>
         <div id="subtexto" class="texto3"><center>TERAPEUTAS</center></div>
     </div>
 
+    <!-- FONDO INFERIOR DERECHO -->
+    <div class="logoInferiorDerecho"><img src="/salud-mental/images/FONDO-ESPECIALISTAS.jpg" alt="decoracion2"></div>
+
     <!-- BOTON DE AGENDAR CITA -->
     <div class="botonDeCita"><button>AGENDAR CITA</button></div>
 
-    <div class="logoInferiorDerecho"><img src="/salud-mental/images/FONDO-ESPECIALISTAS.jpg" alt="decoración1" width="411px" height="264px"></div>
-
     <footer>©</footer>
-
-    <!-- SCRIPT PARA DETECTAR EL TAMAÑO DE LA PAGINA HTML -->
-    <p id="size"></p>
 </body>
 
 </html>

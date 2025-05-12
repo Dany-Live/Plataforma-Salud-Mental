@@ -1,23 +1,43 @@
 /*
-    * Hoja de estilos de: stylesLogin.html
+    * Hoja de estilos de: stylesSeleccionEspecialistas.html
 */
 
-/*Agregar fuente personalizada*/
+/****************************************FUENTES PERSONALIZADAS****************************************/
 @font-face
 {
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteRobot';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/*Estilo del body*/
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
     margin: 0px;
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteUbuntuRegular';
 }
+/******************************************************************************************************/
 
+/****************************************ESTILO DEL ENCABEZADO*****************************************/
+/*Estilo de la cabecera*/
 .cabeceraPagina
 {
     display: grid;
@@ -26,18 +46,13 @@ body
     gap: 30px;
 }
 
-.buscador { padding-top: 40px; }
-.iconoRegreso { padding-top: 25px; }
-.iconoUsuario { padding-top: 25px; }
-
-/*Estilo del logo izquierdo1*/
-.logoIzquierdo
-{
-    transform: rotate(180deg);
+/*Ajustes del logo superior izquierdo*/
+.logoIzquierdo { transform: rotate(180deg); }
+.logoIzquierdo img
+{ 
+    width: 250px;
+    height: 230px;
 }
-
-/*Estilo de las opciones de los botones*/
-#opcion { padding-top: 45px; }
 
 /*Estilo de los botones*/
 button
@@ -64,6 +79,14 @@ input
     margin: 0px;
 }
 
+/*Ajustes de los elementos del encabezado*/
+.buscador { padding-top: 40px; }
+.iconoRegreso { padding-top: 25px; }
+.iconoUsuario { padding-top: 25px; }
+#opcion { padding-top: 45px; }
+/******************************************************************************************************/
+
+/********************************ESTILO DEL ENCABEZADO DE ESPECIALISTAS********************************/
 .especialistasIconos
 {
     display: grid;
@@ -72,7 +95,17 @@ input
     gap: 0px 250px;
 }
 
-#subtexto { font-size: 30px; padding: 55px 50px 55px 50px; }
+.psicologo img, .medico img, .terapeuta img
+{
+    width: 300px;
+    height: 300px;
+}
+
+#subtexto 
+{ 
+    font-size: 30px;
+    font-family: 'FuenteUbuntuLight';
+}
 
 .texto1
 {
@@ -85,19 +118,46 @@ input
 .texto2
 {
     color: white;
-    padding: 20px;
     background-color: #3e4685;
     clip-path: inset(10% round 30px);
+    padding: 30px 70px 20px 70px;
 }
 
 .texto3
 {
     color: white;
-    padding: 20px;
+    padding: 30px;
     background-color: #3e7dcd;
     clip-path: inset(10% round 30px);
 }
 
+.logoInferiorDerecho
+{
+    position: absolute;
+    top: 86%;
+    left: 89%;
+    transform: translate(-50%, -50%);
+}
+
+
+.logoInferiorDerecho img
+{
+    width: 411px;
+    height: 264px;
+}
+/******************************************************************************************************/
+
+/********************************ESTILO DEL BOTON PARA AGENDAR LA CITA*********************************/
+.botonDeCita
+{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL FOOTER DE LA PÁGINA************************************/
 /*Estilo del footer*/
 footer 
 {
@@ -106,22 +166,8 @@ footer
     font-size: 30px;
     width: 30px;
     position: absolute;
-    top: 920px;
+    top: 925px;
     left: 0px;
     padding-left: 1890px;
 }
-
-/*Estilo del boton de sesion*/
-.botonDeCita
-{
-    position: absolute;
-    left: 830px;
-    top: 850px;
-}
-
-.logoInferiorDerecho
-{
-    position: absolute;
-    left: 1506px;
-    top: 650px;
-}
+/******************************************************************************************************/

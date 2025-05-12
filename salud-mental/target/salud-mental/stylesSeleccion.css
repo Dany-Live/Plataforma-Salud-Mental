@@ -2,77 +2,131 @@
     * Hoja de estilos de: seleccionCuenta.html
 */
 
-/*Agregar fuente personalizada*/
+/****************************************FUENTES PERSONALIZADAS****************************************/
 @font-face
 {
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteRobot';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/*Estilo del body*/
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
     margin: 0px;
-    font-family: 'FuentePrincipal';
-    position: absolute;
+    font-family: 'FuenteUbuntuRegular';
 }
+/******************************************************************************************************/
 
+/****************************************ESTILOS DEL ENCABEZADO****************************************/
 /*Estilo del titulo de la página*/
 .tituloPagina
 {
+    padding-top: 40px;
     font-size: 65px;
-    padding: 80px 0px 0px 300px;
 }
 
-/*Estilo del logo izquierdo*/
-.logoIzquierdo
+/*Ajuste del logo superior izquierdo*/
+.logoSuperiorIzquierdo
 {
     position: absolute;
-    left: -40px;
-    top: -15px;
     transform: rotate(180deg);
+    top: 0px;
+    left: 0px;
 }
 
-/*Estilo del logo inferior derecho*/
-.logoInferiorDerecho
+/*Ajuste del tamaño del logo superior izquierdo*/
+.logoSuperiorIzquierdo img
 {
-    position: absolute;
-    left: 1298px;
-    top: 548px;
+    width: 250px;
+    height: 250px;
 }
+/******************************************************************************************************/
 
-/*Estilo del logo inferior izquierdo*/
-.logoInferiorIzquierdo
-{
-    position: absolute;
-    left: -35px;
-    top: 602px;
-}
-
-/*Estilo del tipo de cuenta*/
+/*************************************ESTILO DE LOS TIPOS DE CUENTA************************************/
 .tipoDeCuenta
 {
-    padding: 100px 0px 0px 290px;
+    padding-top: 35px;
     display: grid;
     justify-content: center;
     grid-template-columns: auto auto;
-    gap: 0px 100px;
+    gap: 0px 300px;
+}
+
+.iconoAlumno img, .iconoProfesionista img
+{
+    width: 312px;
+    height: 312px;
+}
+/******************************************************************************************************/
+
+/***************************************ESTILO DEL SUBENCABEZADO***************************************/
+/*Estilo del encabezando utilizando grid*/
+.subEncabezado
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 0px 1000px;
+}
+
+/*Ajuste del logo inferior izquierdo*/
+.logoInferiorIzquierdo img
+{
+    width: 312px;
+    height: 389px;
+    padding-top: 65px;
+}
+
+/*Ajuste del logo inferior derecho*/
+.logoInferiorDerecho img
+{
+    width: 579px;
+    height: 301px;
+    padding-top: 150px;
 }
 
 /*Estilos de las etiquetas*/
-.etiquetaAlumno, .etiquetaProfesionista { font-size: 30px; }
+.etiquetaAlumno, .etiquetaProfesionista 
+{ 
+    font-family: 'FuenteUbuntuLight';
+    font-size: 30px;
+}
 
-/*Estilo del icono de regreso*/
+/*Ajuste del icono de regreso*/
 .iconoRegreso
 {
-    background-position: center;
-    background-repeat: no-repeat;
     position: absolute;
-    left: 920px;
-    top: 850px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 280%);
+}
+
+/*Ajuste de la imagen del icono de regreso*/
+.iconoRegreso img
+{
+    width: 112px;
+    height: 112px;
 }
 
 /*Estilo del anclaje URL*/
 a { color: inherit; }
+/******************************************************************************************************/

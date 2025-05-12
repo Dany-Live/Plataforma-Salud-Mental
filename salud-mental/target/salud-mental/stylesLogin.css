@@ -2,23 +2,41 @@
     * Hoja de estilos de: stylesLogin.html
 */
 
-/*Agregar fuente personalizada*/
+/****************************************FUENTES PERSONALIZADAS****************************************/
 @font-face
 {
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteRobot';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/*Estilo del body*/
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
     margin: 0px;
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteUbuntuRegular';
 }
+/******************************************************************************************************/
 
-
+/*********************************AJUSTE DE LOS 2 FONDOS DE LA PÁGINA**********************************/
 /*Estilo de los 2 fondos*/
 .fondosDivididos
 {
@@ -47,92 +65,33 @@ body
     height: 957px;
     width: 955px;
 }
+/******************************************************************************************************/
 
-/*Estilo texto bienvenida*/
+/**************************************ESTILO TEXTO DE BIENVENIDA**************************************/
 .textoBienvenida
 {  
     position: absolute;
-    left: 250px;
-    top: 100px;
-    font-size: 70px;
+    top: 15%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
 }
+/******************************************************************************************************/
 
-/*Estilo de la casilla de confirmación*/
-.recordarUsuario
-{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 380px 360px auto;
-    position: absolute;
-    left: -200px;
-    top: 510px;
-}
-
-/*Estilo del boton de sesion*/
-.botonDeSesion
+/*****************************************AJUSTE DEL FORMULARIO****************************************/
+/*Estilo del correo y contraseña*/
+.ingresarCorreoContraseña
 {
     position: absolute;
-    left: 300px;
-    top: 620px;
-}
-
-/*Estilo del boton*/
-button
-{ 
-    font-size: 40px;
-    background-color: #243386;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0px 25px 0px 25px;
-}
-
-/*Estilo del registro de cuenta*/
-.registroCuenta
-{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto;
-    gap: 20px;
-    font-size: 20px;
-    position: absolute;
-    left: 300px;
-    top: 700px;
-}
-
-/*Estilo del icono de regreso*/
-.regresoPagina
-{
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 430px;
-    top: 850px;
-}
-
-/*Estilo de la caja de texto del correo*/
-.textoCorreo
-{  
-    position: absolute;
-    left: 130px;
-    top: 250px;
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%, -50%);
     font-size: 25px;
-}
-
-/*Estilo de la caja de texto de la contraseña*/
-.textoContraseña
-{  
-    position: absolute;
-    left: 130px;
-    top: 380px;
-    font-size: 25px;
+    font-family: 'FuenteUbuntuLight';
 }
 
 /*Estilo de las entradas de datos*/
-input
+.textoCorreo input, .textoContraseña input
 {
     width: 700px;
     height: 40px;
@@ -142,23 +101,116 @@ input
     margin: 0px;
 }
 
-/*Estilo de los terminos del usuario*/
-#terminos
+/*Ajuste de separación entre el correo y la contraseña*/
+.textoCorreo { padding-bottom: 60px; }
+
+/*Ajuste de los datos recordar usuario*/
+.recordarUsuario
 {
-    padding: 0px;
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    top: 55%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+/*Estilo de la casilla de confirmación*/
+.casilla
+{
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    border: 1px solid black;
     border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
 }
 
-/*Estilo de las condiciones del usuario*/
-.condiciones 
+/*Estilo al marcar la casilla de aceptación*/
+.casilla:checked 
 { 
-    padding-top: 5px; 
-    font-size: 20px;
+    background-color: #243386;
 }
 
-/*Estilo del abclaje del URL*/
+/*Separación de la casilla de confirmación*/
+.casillaDeConfirmacion { padding-right: 10px; }
+
+/*Separación de la condición 1*/
+.condiciones1 
+{ 
+    padding-top: 15px;
+    padding-right: 300px;
+}
+
+/*Separación de la condición 2*/
+.condiciones2 
+{ 
+    font-family: 'FuenteRobot';
+    padding-top: 15px; 
+}
+
+/*Estilo del anclaje URL*/
 a 
 {
     text-decoration: none;
     color: inherit;
 }
+/******************************************************************************************************/
+
+/**********************************ESTILO DEL BOTON DE INICIO DE SESIÓN********************************/
+button
+{ 
+    font-size: 30px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px 10px 25px;
+}
+
+.botonDeSesion
+{
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL REGISTRO DE USUARIO************************************/
+.registroCuenta
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    position: absolute;
+    top: 72%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    gap: 0px 20px;
+}
+/******************************************************************************************************/
+
+/*******************************************BOTON DE REGRESO*******************************************/
+.regresoPagina
+{
+    position: absolute;
+    top: 85%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.regresoPagina img
+{
+    width: 80px; 
+    height: 80px;
+}
+/******************************************************************************************************/

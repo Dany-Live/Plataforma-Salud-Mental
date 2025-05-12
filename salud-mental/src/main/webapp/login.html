@@ -1,4 +1,4 @@
-<!-- Página principal de inicio: login.html -->
+<!-- Página del inicio de sesión: login.html -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -11,51 +11,55 @@
 </head>
 
 <body>
+    <!-- FONDOS DIVIDIDOS -->
+    <div class="fondosDivididos">
+        <div class="izquierda"></div>
+        <div class="derecha"></div>
+    </div>
+
+    <!-- TEXTO BIENVENIDA -->
+    <div class="textoBienvenida"><center>BIENVENIDOS</center></div>
+
+    <!-- FORMULARIO PARA INICIAR SESIÓN -->
     <form action="">
-        <!-- FONDOS DIVIDIDOS -->
-        <div class="fondosDivididos">
-            <div class="izquierda"></div>
-            <div class="derecha"></div>
-        </div>
+        <!-- ENTRADA DE DATOS: CORREO Y CONTRASEÑA -->
+        <div class="ingresarCorreoContraseña">
+            <!-- ENTRADA DE DATOS DEL CORREO -->
+            <div class="textoCorreo">
+                <label>CORREO ELECTRÓNICO:</label>
+                <br>
+                <input type="email" name="email" required>
+            </div>
 
-        <!-- TEXTO BIENVENIDA -->
-        <div class="textoBienvenida"><center>BIENVENIDOS</center></div>
-
-        <!-- ENTRADA DE DATOS DEL CORREO -->
-        <div class="textoCorreo">
-            <label>CORREO ELECTRÓNICO:</label>
-            <br>
-            <input type="email" name="email">
-        </div>
-
-        <!-- ENTRADA DE DATOS DE LA CONTRASEÑA -->
-        <div class="textoContraseña">
-            <label>CONTRASEÑA:</label>
-            <br>
-            <input type="pasword" name="contraseña" required>
+            <!-- ENTRADA DE DATOS DE LA CONTRASEÑA -->
+            <div class="textoContraseña">
+                <label>CONTRASEÑA:</label>
+                <br>
+                <input type="pasword" name="contraseña" required>
+            </div>
         </div>
 
         <!-- CASILLA DE CONFIRMACIÓN -->
         <div class="recordarUsuario">
-            <div><input type="checkbox" required id="terminos"></div>
-            <div class="condiciones">Recordar</div>
-            <div class="condiciones"><a href="recuperarCuenta.html"><u>¿Olvidaste la contraseña?</u></a></div>
+            <div class="casillaDeConfirmacion"><input class="casilla" type="checkbox" required></div>
+            <div class="condiciones1">Recordar</div>
+            <div class="condiciones2"><a href="recuperarCuenta.html"><u>¿Olvidaste la contraseña?</u></a></div>
         </div>
 
         <!-- BOTON DE INICIO DE SESIÓN -->
-        <div class="botonDeSesion"><button>INICIAR SESIÓN</button></div>
-
-        <!-- REGISTRO DE USUARIO -->
-        <div class="registroCuenta">
-            <div>¿No tienes cuenta?</div>
-            <div><a href="seleccionCuenta.html"><u>Registrate</u></a></div>
-        </div>
-
-        <!-- ICONO DE REGRESO A LA PÁGINA PRINCIPAL -->
-        <div class="regresoPagina">
-            <a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a>
-        </div>
+        <div class="botonDeSesion"><button type="submit">INICIAR SESIÓN</button></div>
     </form>
+
+    <!-- REGISTRO DE USUARIO -->
+    <div class="registroCuenta">
+        <div>¿No tienes cuenta?</div>
+        <div><a href="seleccionCuenta.html"><u>Registrate</u></a></div>
+    </div>
+
+    <!-- ICONO DE REGRESO A LA PÁGINA PRINCIPAL -->
+    <div class="regresoPagina">
+        <a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso"></a>
+    </div>
 </body>
 
 </html>

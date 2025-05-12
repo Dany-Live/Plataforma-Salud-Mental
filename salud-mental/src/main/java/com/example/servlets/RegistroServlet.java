@@ -17,11 +17,12 @@ public class RegistroServlet extends HttpServlet
         String numeroMovil = request.getParameter("numeromovil");
         String instituto = request.getParameter("instituto");
         String correo = request.getParameter("correo");
-        String contrasena = request.getParameter("contrasena"); // ¡Ojo con la ñ!
+        String contrasena = request.getParameter("contrasena"); //¡Ojo con la ñ!
+        String sexo = request.getParameter("opcion"); // Directamente obtendrás "Hombre" o "Mujer"
 
         try (Connection conn = DatabaseUtil.getConnection()) 
         {
-            String sql = "INSERT INTO usuarios (nombre, apellido, fecha_nacimiento, telefono, institucion, email, contrasena) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO usuarios (nombre, apellido, fecha_nacimiento, telefono, institucion, email, contrasena, sexo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, nombre);
             statement.setString(2, apellido);
@@ -30,10 +31,16 @@ public class RegistroServlet extends HttpServlet
             statement.setString(5, instituto);
             statement.setString(6, correo);
             statement.setString(7, contrasena);
+            statement.setString(8, sexo);
 
             int rowsInserted = statement.executeUpdate();
-            if (rowsInserted > 0) {
-                response.getWriter().println("¡Registro exitoso!");
+            if (rowsInserted > 0) 
+            {
+                //response.getWriter().println("¡Registro exitoso!");
+
+                // Redirige a una página de sesión
+                response.sendRedirect("paginaPrincipalSesion.html");
+                return; // Termina la ejecución del servlet
             }
         } 
         catch (SQLException e) 

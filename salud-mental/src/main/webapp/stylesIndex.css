@@ -2,46 +2,53 @@
     * Hoja de estilos de: index.html
 */
 
-/*Agregar fuente personalizada*/
+/****************************************FUENTES PERSONALIZADAS****************************************/
 @font-face
 {
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteRobot';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/*Estilo del body*/
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
-    position: absolute;
     margin: 0px;
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteUbuntuLight';
     background-image: url('/salud-mental/images/FONDO-PRINCIPAL.jpg');
     background-repeat: no-repeat;
 }
+/******************************************************************************************************/
 
+/****************************************ESTILOS DEL ENCABEZADO****************************************/
 /*Estilo del encabezando utilizando grid*/
 .contenedorEncabezado
 {
-    padding-top: 10px;
     display: grid;
     justify-content: center;
     grid-template-columns: auto auto auto auto auto;
     gap: 20px;
 }
 
-/*Estilo de las opciones de los botones*/
-#opcion { padding-top: 20px; }
-
-/*Estilo del logos*/
-#logo 
-{ 
-    padding-left: 40px;
-    padding-right: 580px; 
-}
-
-/*Estilo de los botones*/
+/*Estilo general del boton*/
 button
 {
     font-size: 30px;
@@ -52,34 +59,53 @@ button
     text-decoration: none;
     outline: none;
     cursor: pointer;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 25px 0px 25px;
 }
 
-/*Estilo del texto de bienvenida*/
-.textoBienvenida
-{  
-    position: absolute;
-    font-size: 70px;
-    left: 1090px;
-    top: 350px;
-}
-
-/*Estilo del footer*/
-footer 
-{
-    background-color: #243386;
-    color: white;
-    font-size: 30px;
-    width: 30px;
-    position: absolute;
-    top: 920px;
-    left: 0px;
-    padding-left: 1890px;
-}
-
-/*Estilo del anlcaje URL*/
+/*Estilo general del anlcaje URL*/
 a 
 {
     text-decoration: none;
     color: inherit;
 }
+
+/*Ajuste del logo*/
+#logo img
+{
+    width: 253px;
+    height: 226px;
+}
+
+/*Espaciado entre el logo y los botones de opción*/
+#logo 
+{ 
+    padding-top: 10px;
+    padding-right: 580px;
+}
+#opcion { padding-top: 20px; }
+/******************************************************************************************************/
+
+/************************************ESTILO DEL TEXTO DE BIENVENIDA************************************/
+.textoBienvenida
+{
+    font-family: 'FuenteRobot';
+    position: absolute;
+    font-size: 70px;
+    left: 1090px;
+    top: 350px;
+}
+/******************************************************************************************************/
+
+/******************************************ESTILO DEL FOOTER*******************************************/
+footer 
+{
+    position: absolute;
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    top: 925px;
+    left: 0px;
+    padding-left: 1890px;
+}
+/******************************************************************************************************/

@@ -2,82 +2,104 @@
     * Hoja de estilos de: recuperarCuenta.html
 */
 
-/*Agregar fuente personalizada*/
+/****************************************FUENTES PERSONALIZADAS****************************************/
 @font-face
 {
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteRobot';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/*Estilo del body*/
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
-    position: absolute;
     margin: 0px;
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteUbuntuRegular';
 }
+/******************************************************************************************************/
 
-/*Estilo del logo izquierdo1*/
-.logoIzquierdo1
-{
-    position: absolute;
-    left: -40px;
-    top: -15px;
-    transform: rotate(180deg);
-}
-
-/*Estilo del logo izquierdo2*/
-.logoIzquierdo2
-{
-    position: absolute;
-    left: 1568px;
-    top: 630px;
-    transform: rotate(0deg);
-}
-
-/*Estilo del logo inferior izquierdo*/
-.logoInferiorIzquierdo
-{
-    position: absolute;
-    left: 0px;
-    top: 500px;
-}
-
-/*Estilo del footer*/
-footer 
-{
-    background-color: #243386;
-    color: white;
-    font-size: 30px;
-    width: 30px;
-    position: absolute;
-    top: 920px;
-    left: 0px;
-    padding-left: 1890px;
-}
-
+/************************************ESTILO DEL TITULO DE LA PÁGINA************************************/
 /*Estilo del titulo de la página*/
 .tituloPagina
 {
     font-size: 65px;
-    padding: 80px 0px 0px 560px;
+    padding-top: 40px;
+}
+/******************************************************************************************************/
+
+/********************************ESTILO DE LAS DECORACIONES DE LA PÁGINA*******************************/
+/*Estilo del logo superior izquierdo*/
+.logoSuperiorIzquierdo
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotate(180deg);
 }
 
-/*Estilo de la caja de texto del correo*/
-.textoCorreo
-{  
+.logoSuperiorIzquierdo img
+{
+    width: 300px;
+    height: 250px;
+}
+
+/*Estilo del logo inferior derecho*/
+.logoInferiorDerecho
+{
     position: absolute;
-    left: 590px;
-    top: 250px;
+    left: 1616px;
+    top: 670px;
+    transform: rotate(0deg);
+}
+
+.logoInferiorDerecho img
+{
+    width: 300px;
+    height: 250px;
+}
+
+.logoInferiorIzquierdo
+{
+    position: absolute;
+    left: 0px;
+    top: 620px;
+}
+/******************************************************************************************************/
+
+/************************************AJUSTE DE LA ENTRADA DE DATOS*************************************/
+/*Estilo de la entrada de datos*/
+.entradaDeDatos
+{
+    font-family: 'FuenteUbuntuLight';
     font-size: 25px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*Estilo de las entradas de datos*/
 input
 {
-    width: 700px;
+    width: 500px;
     height: 40px;
     border-radius: 50px;
     font-size: 25px;
@@ -85,14 +107,20 @@ input
     margin: 0px;
 }
 
-/*Estilo del boton de sesion*/
-.botonDeSesion
+/*Estilo del select*/
+select
 {
-    position: absolute;
-    left: 840px;
-    top: 500px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
 }
 
+.textoCorreo {padding-bottom: 100px; }
+/******************************************************************************************************/
+
+/*********************************ESTILO DEL BOTON DE RECUPERAR CUENTA*********************************/
 /*Estilo del boton*/
 button
 { 
@@ -107,12 +135,42 @@ button
     padding: 0px 25px 0px 25px;
 }
 
-/*Estilo del icono de regreso*/
+/*Ajuste del boton de recuperar cuenta*/
+.botonDeRecuperacion
+{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/******************************************************************************************************/
+
+/*******************************************BOTON DE REGRESO*******************************************/
 .regresoPagina
 {
-    background-position: center;
-    background-repeat: no-repeat;
     position: absolute;
-    left: 900px;
-    top: 800px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.regresoPagina img
+{
+    width: 80px; 
+    height: 80px;
+}
+/******************************************************************************************************/
+
+/******************************************ESTILO DEL FOOTER*******************************************/
+footer 
+{
+    position: absolute;
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    top: 925px;
+    left: 0px;
+    padding-left: 1890px;
+}
+/******************************************************************************************************/
