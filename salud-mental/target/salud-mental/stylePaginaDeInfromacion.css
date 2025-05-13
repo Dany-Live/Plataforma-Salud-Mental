@@ -2,51 +2,74 @@
     * Hoja de estilos de: paginaDeInformacion.html
 */
 
-/*Agregar fuente personalizada*/
+/****************************************FUENTES PERSONALIZADAS****************************************/
 @font-face
 {
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteRobot';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/*Estilo del body*/
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
-    position: absolute;
     margin: 0px;
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteUbuntuRegular';
 }
+/******************************************************************************************************/
 
-/*Estilo del encabezando utilizando grid*/
-.contenedorEncabezado
-{
-    padding-top: 10px;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto auto auto;
-    gap: 20px;
-}
-
+/*************************************CONFIGURACIÓN DE LA CABECERA*************************************/
+/*Estilo de la cabecera*/
 .cabeceraPagina
 {
     display: grid;
     justify-content: center;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 30px;
+    grid-template-columns: auto auto auto auto;
+    padding-top: 10px;
+    gap: 20px;
 }
 
-.buscador 
-{ 
-    padding-top: 40px;
-    padding-left: 280px;
+/*Estilo de las entradas de datos*/
+input
+{
+    width: 1120px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
 }
-.iconoRegreso { padding-top: 25px; }
-.iconoUsuario { padding-top: 25px; }
 
-/*Estilo de las opciones de los botones*/
-#opcion { padding-top: 45px; }
+/*Ajuste de los iconos*/
+.iconoRegreso img
+{
+    width: 80px;
+    height: 80px;
+}
+
+.iconoUsuario img
+{
+    width: 80px;
+    height: 80px;
+}
 
 /*Estilo de los botones*/
 button
@@ -62,57 +85,65 @@ button
     padding: 0px 20px 0px 20px;
 }
 
-/*Estilo de las entradas de datos*/
-input
-{
-    width: 1120px;
-    height: 40px;
-    border-radius: 50px;
-    font-size: 25px;
-    padding-left: 10px;
-    margin: 0px;
+/*Ajustes buscador y boton*/
+.buscador 
+{ 
+    font-family: 'FuenteUbuntuLight';
+    padding-top: 20px;
+    padding-right: 250px;
 }
+#opcion { padding-top: 25px; }
+/******************************************************************************************************/
 
+/**********************************ESTILO DE LOS SUBTEMAS DE LA PÁGINA*********************************/
+/*Estilo subtemas*/
 .subTemas
 {
+    padding-top: 80px;
     display: grid;
     justify-content: center;
     grid-template-columns: auto auto;
 }
 
+/*Estilo del texto de informe*/
 .textoDeInforme
 {
     font-size: 30px;
-    text-align: center;
-    padding-top: 80px;
+    font-family: 'FuenteUbuntuLight';
 }
 
+/*Ajuste de la imagen del subtema*/
+.imagenDelTema { padding-left: 40px; }
+/******************************************************************************************************/
+
+/****************************************ESTILO DE LOS SUBTEMAS****************************************/
 .actividadesInformativas
 {
-    display: grid;
-    justify-content: center;
+    font-family: 'FuenteUbuntuLight';
+    font-size: 30px;
     position: absolute;
-    top: 550px;
-    left: 20px;
+    top: 60%;
+    left: 0%;
 }
 
 #textos
 {
     text-align: center;
-    font-size: 30px;
     background-color: #9ab7e9;
     color: white;
     clip-path: inset(10% round 30px);
     padding: 20px 200px 20px 200px;
 }
+/******************************************************************************************************/
 
+/******************************AJUSTES DE LOS NÚMEROS DE LAS ACTIVIDADES*******************************/
 .numeroActividades
 {
-    display: grid;
-    justify-content: center;
+    font-family: 'FuenteUbuntuLight';
+    font-size: 30px;
     position: absolute;
-    top: 550px;
-    left: 100px;
+    top: 60%;
+    left: 3%;
 }
 
 #numeros
@@ -124,19 +155,45 @@ input
     clip-path: inset(10% round 30px);
     padding: 20px 30px 20px 30px;
 }
+/******************************************************************************************************/
 
+/****************************************AJUSTE DE LOS ICONOS******************************************/
 .iconosPrincipales
 {
     display: grid;
     justify-content: center;
     grid-template-columns: auto auto auto;
     position: absolute;
+    top: 75%;
+    left: 68%;
+    transform: translate(-50%, -50%);
     gap: 0px 100px;
-    top: 600px;
-    left: 980px;
+}
+
+.progresoIcon img, .chatIcon img, .citasIcon img
+{
+    width: 200px;
+    height: 200px;
 }
 
 #nombresIconosPrincipales
 {
-    text-align: center;
+    font-family: 'FuenteUbuntuLight';
+    font-size: 30px;
 }
+/******************************************************************************************************/
+
+/**************************************ESTILO FOOTER DE LA PÁGINA**************************************/
+/*Estilo del footer*/
+footer 
+{
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    position: absolute;
+    top: 925px;
+    left: 0px;
+    padding-left: 1890px;
+}
+/******************************************************************************************************/

@@ -1,4 +1,4 @@
-<!-- Página principal de inicio: paginaDeReportes.html -->
+<!-- Página de reportes: paginaDeReportes.html -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,34 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud Mental</title>
     <link rel="stylesheet" href="stylePaginaDeReportes.css">
-    <script src="scriptIndex.js" defer></script>
 </head>
 
 <body>
-    <!-- CABECERA DE LA PÁGINA -->
-    <div class="cabeceraDeReportes">
-        <div class="logoSuperior"><img src="/salud-mental/images/PRIMER-LOGO-REGISTRO.webp" alt="imagenregistro1" width="334px" height="250px"></div>
-        <div class="titulo">¿TIENES ALGUNA QUEJA O REPORTE?</div>
-        <div class="iconoRegreso"><a href="index.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
-        <div class="iconoUsuario"><a href=""><img src="/salud-mental/images/ICONO-USUARIO.png" alt="usuario" width="80px" height="80px"></a></div>
-    </div>
+    <!-- LOGO SUPERIOR DERECHO -->
+    <div class="logoSuperior"><img src="/salud-mental/images/PRIMER-LOGO-REGISTRO.png" alt="imagenregistro1"></div>
+
+    <!-- TITULO DE LA PÁGINA -->
+    <div class="titulo"><center>¿TIENES ALGUNA QUEJA O REPORTE?</center></div>
+
+    <!-- ICONO DE REGRESO -->
+    <div class="iconoRegreso"><a href="paginaPrincipalSesion.html"><img src="/salud-mental/images/ICONO-REGRESO.jpg" alt="regreso"></a></div>
+
+    <!-- ICONO USUARIO -->
+    <div class="iconoUsuario"><a href=""><img src="/salud-mental/images/ICONO-USUARIO.png" alt="usuario"></a></div>
 
     <!-- LOGO INFERIOR DERECHO -->
     <div class="logoInferior">
-        <img src="/salud-mental/images/DECORACION.png" alt="decoración2" width="350px" height="300px">
+        <img src="/salud-mental/images/DECORACION.png" alt="decoracion1">
     </div>
 
-    <div class="cajaDeComentarios">
-            <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="COMENTARIOS..."></textarea>
-    </div>
+    <!-- CAJA DE COMENTARIOS -->
+    <form action="">
+        <div class="cajaDeComentarios">
+            <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="COMENTARIOS..." required></textarea>
+        </div>
 
-    <!-- BOTON DE ENVIO -->
-    <div class="botonDeEnvion"><button>ENVIAR</button></div>
+        <!-- BOTON DE ENVIO -->
+        <div class="botonDeEnvion"><button>ENVIAR</button></div>
+    </form>
 
+    <!-- FOOTER DE LA PÁGINA -->
     <footer>©</footer>
-
-    <!-- SCRIPT PARA DETECTAR EL TAMAÑO DE LA PAGINA HTML -->
-    <p id="size"></p>
 </body>
 
 </html>

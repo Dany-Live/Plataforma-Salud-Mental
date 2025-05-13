@@ -2,67 +2,118 @@
     * Hoja de estilos de: paginaDeReportes.html
 */
 
-/*Agregar fuente personalizada*/
+/****************************************FUENTES PERSONALIZADAS****************************************/
 @font-face
 {
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteRobot';
     src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/*Estilo del body*/
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
     margin: 0px;
-    font-family: 'FuentePrincipal';
+    font-family: 'FuenteUbuntuRegular';
 }
+/******************************************************************************************************/
 
-.cabeceraDeReportes
+/************************************ESTILO DEL TITULO DE LA PÁGINA************************************/
+/*Estilo del titulo de la página*/
+.titulo
 {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto auto auto;
-    gap: 20px;
+    font-size: 65px;
+    padding-top: 40px;
 }
+/******************************************************************************************************/
 
-.titulo 
-{ 
-    font-size: 70px;
-    padding-top: 60px;
-}
-
-.iconoRegreso, .iconoUsuario
+/**********************************AJUSTES DEL LOGO SUPERIOR IZQUIERDO*********************************/
+.logoSuperior
 {
-    padding-top: 60px;
-}
-
-/*Estilo del footer*/
-footer 
-{
-    background-color: #243386;
-    color: white;
-    font-size: 30px;
-    width: 30px;
     position: absolute;
-    top: 920px;
-    left: 0px;
-    padding-left: 1890px;
+    top: 0%;
+    left: 0%;
 }
 
+.logoSuperior img
+{
+    width: 355px;
+    height: 264px;
+}
+/******************************************************************************************************/
+
+/************************************AJUSTES DEL ICONO DE REGRESO**************************************/
+.iconoRegreso
+{
+    position: absolute;
+    top: 4%;
+    left:85%;
+}
+
+.iconoRegreso img
+{
+    width: 80px;
+    height: 80px;
+}
+/******************************************************************************************************/
+
+/*************************************AJUSTES DEL ICONO DE USUARIO*************************************/
+.iconoUsuario
+{
+    position: absolute;
+    top: 4%;
+    left:92%;
+}
+
+.iconoUsuario img
+{
+    width: 80px;
+    height: 80px;
+}
+/******************************************************************************************************/
+
+/************************************AJUSTE LOGO INFERIOR DERECHO**************************************/
+/*AJUSTES DEL LOGO INFERIOR DERECHO*/
 .logoInferior
 {
     position: absolute;
-    left: 1568px;
-    top: 630px;
-    transform: rotate(0deg);
+    top: 68%;
+    left: 84%;
 }
 
+.logoInferior img
+{
+    width: 290px;
+    height: 275px;
+}
+/******************************************************************************************************/
+
+/***************************************ESTILO CAJA DE COMENTARIOS**************************************/
 .cajaDeComentarios
 {
+    font-family: 'FuenteUbuntuLight';
     position: absolute;
-    top: 250px;
-    left: 400px;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 textarea 
@@ -76,13 +127,16 @@ textarea
     font-size: 16px;
     font-family: Arial, sans-serif;
 }
+/******************************************************************************************************/
 
+/*********************************ESILO DEL BOTON PARA ENVIAR REPORTE*********************************/
 /*Estilo del boton de sesion*/
 .botonDeEnvion
 {
     position: absolute;
-    top: 650px;
-    left: 400px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*Estilo del boton*/
@@ -98,3 +152,19 @@ button
     cursor: pointer;
     padding: 0px 25px 0px 25px;
 }
+/******************************************************************************************************/
+
+/**************************************ESTILO FOOTER DE LA PÁGINA**************************************/
+/*Estilo del footer*/
+footer 
+{
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    position: absolute;
+    top: 925px;
+    left: 0px;
+    padding-left: 1890px;
+}
+/******************************************************************************************************/
