@@ -8,16 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud Mental</title>
     <link rel="stylesheet" href="stylesIndex.css">
-    <script src="scriptAjustePagina.js" defer></script>
 </head>
 
 <body>
+    <!-- IMAGEN DE FONDO -->
+    <div class="fondoImagen"></div>
+
+    <!-- FONDOS DIVIDIDOS -->
+    <div class="fondosDivididos">
+        <div class="izquierda"></div>
+        <div class="derecha"></div>
+    </div>
+
     <!-- CABECERA DE LA PÁGINA -->
     <div class="contenedorEncabezado">
         <div id="logo"><img src="/salud-mental/images/LOGO-PAGINA.png" alt="Logo"></div>
         <div id="opcion"><button>INFORMACIÓN</button></div>
         <div id="opcion"><button>CONTACTOS</button></div>
-        <div id="opcion"><button><a href="seleccionCuenta.html">REGISTRARSE</a></button></div>
+        <div id="opcion"><button> <a href="paginaCarga.html?next=seleccionCuenta.html">REGISTRARSE</a></button></div>
         <div id="opcion"><button><a href="login.html">MI CUENTA</a></button></div>
     </div>
 
@@ -26,9 +34,6 @@
 
     <!-- FOOTER DE LA PÁGINA -->
     <footer>©</footer>
-
-    <!-- SCRIPT PARA DETECTAR EL TAMAÑO DE LA PAGINA HTML -->
-    <p id="size"></p>
 </body>
 
 </html>

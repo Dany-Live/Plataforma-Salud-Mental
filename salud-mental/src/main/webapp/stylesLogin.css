@@ -214,3 +214,103 @@ button
     height: 80px;
 }
 /******************************************************************************************************/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************************PÁGINA RESPONSIVA*******************************************/
+@media (max-width:1280px)
+{
+    /*********************************AJUSTE DE LOS 2 FONDOS DE LA PÁGINA**********************************/
+    /*Estilo del fondo izquierdo*/
+    .izquierda
+    {
+        height: 591px;
+        width: 640px;
+    }
+
+    /*Estilo del fondo derecho*/
+    .derecha
+    {
+        background-size: 932px 638px;
+        height: 591px;
+        width: 640px;
+    }
+    /******************************************************************************************************/
+
+    /**************************************ESTILO TEXTO DE BIENVENIDA**************************************/
+    .textoBienvenida
+    {
+        font-size: 42px;
+    }
+    /******************************************************************************************************/
+
+    /*****************************************AJUSTE DEL FORMULARIO****************************************/
+    /*Estilo del correo y contraseña*/
+    .ingresarCorreoContraseña
+    {
+        font-size: 16px;
+    }
+
+    /*Estilo de las entradas de datos*/
+    .textoCorreo input, .textoContraseña input
+    {
+        width: 466px;
+        height: 26px;
+        font-size: 15px;
+    }
+
+    /*Ajuste de separación entre el correo y la contraseña*/
+    .textoCorreo { padding-bottom: 40px; }
+
+    /*Estilo de la casilla de confirmación*/
+    .casilla
+    {
+        width: 26px;
+        height: 26px;
+    }
+
+    /*Separación de la casilla de confirmación*/
+    .casillaDeConfirmacion { padding-right: 6px; }
+
+    /*Separación de la condición 1*/
+    .condiciones1 
+    { 
+        padding-top: 6px;
+        padding-right: 45px;
+        font-size: 15px;
+    }
+
+    /*Separación de la condición 2*/
+    .condiciones2 
+    { 
+        font-family: 'FuenteRobot';
+        padding-top: 6px; 
+        font-size: 15px;
+    }
+    /******************************************************************************************************/
+
+    /**********************************ESTILO DEL BOTON DE INICIO DE SESIÓN********************************/
+    button
+    { 
+        font-size: 20px;
+        padding: 6px 16px 6px 16px;
+    }
+    /******************************************************************************************************/
+
+    /************************************ESTILO DEL REGISTRO DE USUARIO************************************/
+    .registroCuenta
+    {
+        font-size: 14px;
+        gap: 0px 20px;
+    }
+    /******************************************************************************************************/
+
+    /*******************************************BOTON DE REGRESO*******************************************/
+    .regresoPagina img
+    {
+        width: 52px; 
+        height: 52px;
+    }
+    /******************************************************************************************************/
+}
+/******************************************************************************************************/
