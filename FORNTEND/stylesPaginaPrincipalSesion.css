@@ -1,0 +1,98 @@
+/*
+    * Hoja de estilos de: paginaPrincipalSesion.html
+*/
+
+/****************************************FUENTES PERSONALIZADAS****************************************/
+@font-face
+{
+    font-family: 'FuenteRobot';
+    src: url('/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
+body 
+{
+    margin: 0px;
+    font-family: 'FuenteUbuntuLight';
+    background-image: url('/images/FONDO-PRINCIPAL-SESION.jpg');
+    background-repeat: no-repeat;
+}
+/******************************************************************************************************/
+
+/****************************************ESTILOS DEL ENCABEZADO****************************************/
+/*Estilo del encabezando utilizando grid*/
+.contenedorEncabezado
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 20px;
+}
+
+/*Estilo general del boton*/
+button
+{
+    font-size: 30px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 25px 0px 25px;
+}
+
+/*Estilo general del anlcaje URL*/
+a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Ajuste del logo*/
+#logo img
+{
+    width: 253px;
+    height: 226px;
+}
+
+/*Espaciado entre el logo y los botones de opción*/
+#logo 
+{ 
+    padding-top: 10px;
+    padding-right: 710px;
+}
+#opcion { padding-top: 20px; }
+/******************************************************************************************************/
+
+/************************************ESTILO DEL TEXTO DE BIENVENIDA************************************/
+.textoBienvenida
+{
+    font-family: 'FuenteRobot';
+    position: absolute;
+    font-size: 50px;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/******************************************************************************************************/

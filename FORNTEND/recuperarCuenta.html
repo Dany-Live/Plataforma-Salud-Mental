@@ -1,0 +1,69 @@
+<!-- Página para recuperar la cuenta: recuperarCuenta.html -->
+ 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Mental</title>
+    <link rel="stylesheet" href="styleRecuperarCuenta.css">
+</head>
+
+<body>
+    <!-- TITULO DE LA PÁGINA -->
+    <div class="tituloPagina"><center>RECUPERAR CONTRASEÑA</center></div>
+
+    <!-- LOGO SUPERIOR IZQUIERDO -->
+    <div class="logoSuperiorIzquierdo">
+        <img src="/images/DECORACION.png" alt="decoracion1">
+    </div>
+
+    <!-- LOGO INFERIOR DERECHO -->
+    <div class="logoInferiorDerecho">
+        <img src="/images/DECORACION.png" alt="decoracion2">
+    </div>
+
+    <!-- LOGO INFERIOR IZQUIERDO -->
+    <div class="logoInferiorIzquierdo">
+        <img src="/images/FONDO-RECUPERAR-CUENTA.png" alt="decoracion3">
+    </div>
+
+    <!-- ENTRADA DE DATOS -->
+    <form action="">
+
+        <div class="entradaDeDatos">
+            <!-- ENTRADA DE DATOS DEL CORREO -->
+            <div class="textoCorreo">
+                <label>CORREO ELECTRÓNICO:</label>
+                <br>
+                <input type="email" name="email" required>
+            </div>
+
+            <!-- SELECCIÓN DEL TIPO DE CUENTRA -->
+            <div class="tipoCuenta">
+                <center>
+                <label>TIPO DE CUENTA:</label>
+                <br>
+                <select id="selector" name="opcion" required>
+                    <option value="op1">ALUMNO</option>
+                    <option value="op2">PROFESIONISTA</option>
+                </select>
+                </center>
+            </div>
+        </div>
+
+        <!-- BOTON DE RECUPERACIÓN -->
+        <div class="botonDeRecuperacion"><button type="submit">ENVIAR</button></div>
+
+        <!-- ICONO DE REGRESO A LA PÁGINA PRINCIPAL -->
+        <div class="regresoPagina">
+            <a href="index.html"><img src="/images/ICONO-REGRESO.jpg" alt="regreso"></a>
+        </div>
+    </form>
+
+    <!-- FOOTER DE LA PÁGINA -->
+    <footer>©</footer>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+/*
+    * Hoja de estilos de: recuperarCuenta.html
+*/
+
+/****************************************FUENTES PERSONALIZADAS****************************************/
+@font-face
+{
+    font-family: 'FuenteRobot';
+    src: url('/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
+body 
+{
+    margin: 0px;
+    font-family: 'FuenteUbuntuRegular';
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL TITULO DE LA PÁGINA************************************/
+/*Estilo del titulo de la página*/
+.tituloPagina
+{
+    font-size: 65px;
+    padding-top: 40px;
+}
+/******************************************************************************************************/
+
+/********************************ESTILO DE LAS DECORACIONES DE LA PÁGINA*******************************/
+/*Estilo del logo superior izquierdo*/
+.logoSuperiorIzquierdo
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: rotate(180deg);
+}
+
+.logoSuperiorIzquierdo img
+{
+    width: 300px;
+    height: 250px;
+}
+
+/*Estilo del logo inferior derecho*/
+.logoInferiorDerecho
+{
+    position: absolute;
+    left: 1616px;
+    top: 670px;
+    transform: rotate(0deg);
+}
+
+.logoInferiorDerecho img
+{
+    width: 300px;
+    height: 250px;
+}
+
+.logoInferiorIzquierdo
+{
+    position: absolute;
+    left: 0px;
+    top: 620px;
+}
+/******************************************************************************************************/
+
+/************************************AJUSTE DE LA ENTRADA DE DATOS*************************************/
+/*Estilo de la entrada de datos*/
+.entradaDeDatos
+{
+    font-family: 'FuenteUbuntuLight';
+    font-size: 25px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Estilo de las entradas de datos*/
+input
+{
+    width: 500px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+/*Estilo del select*/
+select
+{
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+.textoCorreo {padding-bottom: 100px; }
+/******************************************************************************************************/
+
+/*********************************ESTILO DEL BOTON DE RECUPERAR CUENTA*********************************/
+/*Estilo del boton*/
+button
+{ 
+    font-size: 40px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 25px 0px 25px;
+}
+
+/*Ajuste del boton de recuperar cuenta*/
+.botonDeRecuperacion
+{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/******************************************************************************************************/
+
+/*******************************************BOTON DE REGRESO*******************************************/
+.regresoPagina
+{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.regresoPagina img
+{
+    width: 80px; 
+    height: 80px;
+}
+/******************************************************************************************************/
+
+/******************************************ESTILO DEL FOOTER*******************************************/
+footer 
+{
+    position: absolute;
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    top: 925px;
+    left: 0px;
+    padding-left: 1890px;
+}
+/******************************************************************************************************/

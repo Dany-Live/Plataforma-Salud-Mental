@@ -1,0 +1,229 @@
+/*
+    * Hoja de estilos de: seleccionCuenta.html
+*/
+
+/****************************************FUENTES PERSONALIZADAS****************************************/
+@font-face
+{
+    font-family: 'FuenteRobot';
+    src: url('/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
+body 
+{
+    margin: 0px;
+    font-family: 'FuenteUbuntuRegular';
+}
+/******************************************************************************************************/
+
+/****************************************ESTILOS DEL ENCABEZADO****************************************/
+/*Estilo del titulo de la página*/
+.tituloPagina
+{
+    padding-top: 40px;
+    font-size: 65px;
+}
+
+/*Ajuste del logo superior izquierdo*/
+.logoSuperiorIzquierdo
+{
+    position: absolute;
+    transform: rotate(180deg);
+    top: 0px;
+    left: 0px;
+}
+
+/*Ajuste del tamaño del logo superior izquierdo*/
+.logoSuperiorIzquierdo img
+{
+    width: 250px;
+    height: 250px;
+}
+/******************************************************************************************************/
+
+/*************************************ESTILO DE LOS TIPOS DE CUENTA************************************/
+.tipoDeCuenta
+{
+    padding-top: 35px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 0px 300px;
+}
+
+.iconoAlumno, .iconoProfesionista
+{
+    border-radius: 50%;
+    border: 4px solid #243386;
+    overflow: hidden;
+}
+
+.iconoAlumno img, .iconoProfesionista img
+{
+    width: 312px;
+    height: 312px;
+    padding: 8px;
+}
+/******************************************************************************************************/
+
+/***************************************ESTILO DEL SUBENCABEZADO***************************************/
+/*Estilo del encabezando utilizando grid*/
+.subEncabezado
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 0px 1000px;
+}
+
+/*Ajuste del logo inferior izquierdo*/
+.logoInferiorIzquierdo img
+{
+    width: 312px;
+    height: 389px;
+    padding-top: 40px;
+}
+
+/*Ajuste del logo inferior derecho*/
+.logoInferiorDerecho img
+{
+    width: 579px;
+    height: 301px;
+    padding-top: 130px;
+}
+
+/*Estilos de las etiquetas*/
+.etiquetaAlumno, .etiquetaProfesionista 
+{ 
+    font-family: 'FuenteUbuntuLight';
+    font-size: 30px;
+}
+
+/*Ajuste del icono de regreso*/
+.iconoRegreso
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 280%);
+    border-radius: 50%;
+    border: 4px solid #243386;
+    overflow: hidden;
+    background-color: #243386;
+}
+
+/*Ajuste de la imagen del icono de regreso*/
+.iconoRegreso img
+{
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+}
+
+/*Estilo del anclaje URL*/
+a { color: inherit; }
+/******************************************************************************************************/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************************PÁGINA RESPONSIVA*******************************************/
+@media (max-width:1280px)
+{
+    /****************************************ESTILOS DEL ENCABEZADO****************************************/
+    /*Estilo del titulo de la página*/
+    .tituloPagina
+    {
+        padding-top: 26px;
+        font-size: 42px;
+    }
+
+    /*Ajuste del tamaño del logo superior izquierdo*/
+    .logoSuperiorIzquierdo img
+    {
+        width: 165px;
+        height: 165px;
+    }
+    /******************************************************************************************************/
+
+    /*************************************ESTILO DE LOS TIPOS DE CUENTA************************************/
+    .tipoDeCuenta
+    {
+        padding-top: 22px;
+        gap: 0px 200px;
+    }
+
+    .iconoAlumno img, .iconoProfesionista img
+    {
+        width: 200px;
+        height: 200px;
+    }
+    /******************************************************************************************************/
+
+    /***************************************ESTILO DEL SUBENCABEZADO***************************************/
+    /*Estilo del encabezando utilizando grid*/
+    .subEncabezado
+    {
+        gap: 0px 665px;
+    }
+
+    /*Ajuste del logo inferior izquierdo*/
+    .logoInferiorIzquierdo img
+    {
+        width: 190px;
+        height: 240px;
+        padding-top: 0px;
+    }
+
+    /*Ajuste del logo inferior derecho*/
+    .logoInferiorDerecho img
+    {
+        width: 386px;
+        height: 200px;
+        padding-top: 45px;
+    }
+
+    /*Estilos de las etiquetas*/
+    .etiquetaAlumno, .etiquetaProfesionista 
+    { 
+        font-family: 'FuenteUbuntuLight';
+        font-size: 20px;
+    }
+
+    /*Ajuste del icono de regreso*/
+    .iconoRegreso
+    {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, 250%);
+    }
+
+    /*Ajuste de la imagen del icono de regreso*/
+    .iconoRegreso img
+    {
+        width: 74px;
+        height: 74px;
+    }
+    /******************************************************************************************************/
+}
+/******************************************************************************************************/

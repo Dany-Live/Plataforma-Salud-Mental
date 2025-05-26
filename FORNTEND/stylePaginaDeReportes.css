@@ -1,0 +1,170 @@
+/*
+    * Hoja de estilos de: paginaDeReportes.html
+*/
+
+/****************************************FUENTES PERSONALIZADAS****************************************/
+@font-face
+{
+    font-family: 'FuenteRobot';
+    src: url('/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
+body 
+{
+    margin: 0px;
+    font-family: 'FuenteUbuntuRegular';
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL TITULO DE LA PÁGINA************************************/
+/*Estilo del titulo de la página*/
+.titulo
+{
+    font-size: 65px;
+    padding-top: 40px;
+}
+/******************************************************************************************************/
+
+/**********************************AJUSTES DEL LOGO SUPERIOR IZQUIERDO*********************************/
+.logoSuperior
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.logoSuperior img
+{
+    width: 355px;
+    height: 264px;
+}
+/******************************************************************************************************/
+
+/************************************AJUSTES DEL ICONO DE REGRESO**************************************/
+.iconoRegreso
+{
+    position: absolute;
+    top: 4%;
+    left:85%;
+}
+
+.iconoRegreso img
+{
+    width: 80px;
+    height: 80px;
+}
+/******************************************************************************************************/
+
+/*************************************AJUSTES DEL ICONO DE USUARIO*************************************/
+.iconoUsuario
+{
+    position: absolute;
+    top: 4%;
+    left:92%;
+}
+
+.iconoUsuario img
+{
+    width: 80px;
+    height: 80px;
+}
+/******************************************************************************************************/
+
+/************************************AJUSTE LOGO INFERIOR DERECHO**************************************/
+/*AJUSTES DEL LOGO INFERIOR DERECHO*/
+.logoInferior
+{
+    position: absolute;
+    top: 68%;
+    left: 84%;
+}
+
+.logoInferior img
+{
+    width: 290px;
+    height: 275px;
+}
+/******************************************************************************************************/
+
+/***************************************ESTILO CAJA DE COMENTARIOS**************************************/
+.cajaDeComentarios
+{
+    font-family: 'FuenteUbuntuLight';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+textarea 
+{
+    width: 1250px;
+    height: 350px;
+    outline: none;
+    border-radius: 10px;
+    border-color: black;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+/******************************************************************************************************/
+
+/*********************************ESILO DEL BOTON PARA ENVIAR REPORTE*********************************/
+/*Estilo del boton de sesion*/
+.botonDeEnvion
+{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Estilo del boton*/
+button
+{ 
+    font-size: 40px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 25px 0px 25px;
+}
+/******************************************************************************************************/
+
+/**************************************ESTILO FOOTER DE LA PÁGINA**************************************/
+/*Estilo del footer*/
+footer 
+{
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    position: absolute;
+    top: 925px;
+    left: 0px;
+    padding-left: 1890px;
+}
+/******************************************************************************************************/

@@ -1,0 +1,97 @@
+<!-- P+agina para registrar los datos estudiantiles: registroEstudiante.html -->
+ 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Mental</title>
+    <link rel="stylesheet" href="stylesRegistroEstudiantes.css">
+</head>
+
+<body>
+    <!-- TITULO DE LA PÁGINA -->
+    <div class="tituloPagina"><center>CREA UNA CUENTA</center></div>
+
+    <!-- CABECERA DE LA PÁGINA -->
+    <div class="logoSuperiorDerecho"><img src="/images/PRIMER-LOGO-REGISTRO.png" alt="imagenRegistro1"></div>
+
+    <!-- ICONO INFERIOR IZQUIERDO -->
+    <div class="logoInferiorIzquierdo"><img src="/images/SEGUNDO-LOGO-REGISTRO.jpg" alt="imagenRegistro2"></div>
+
+    <!-- FORMULARIO DE LA PÁGINA -->
+    <form action="/salud-mental/registro" method="POST">
+        <!-- ENTRADA DE DATOS: NOMBRES, APELLIDOS Y FECHA DE NACIMIENTO -->
+        <div class="primerosDatos">
+            <div>
+                <label>NOMBRES(S)</label>
+                <br>
+                <input type="text" placeholder="" name="nombre" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{4,50}" required>
+            </div>
+            <div>
+                <label>APELLIDO(S)</label>
+                <br>
+                <input type="text" placeholder="" name="apellido" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ ]{10,50}" required>
+            </div>
+            <div>
+                <label>FECHA DE NACIMIENTO</label>
+                <br>
+                <input type="date" placeholder="" name="fechanacimiento" required>
+            </div>
+        </div>
+
+        <!-- ENTRADA DE DATOS: NÚMERO, INSTITUCIÓN Y CORREO -->
+        <div class="segundosDatos">
+            <div>
+                <label>NÚMERO CELULAR</label>
+                <br>
+                <input type="tel" placeholder="" name="numeromovil" pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+            <div>
+                <label>INSTITUCIÓN</label>
+                <br>
+                <input type="text" placeholder="" name="instituto" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]{5,50}" required>
+            </div>
+            <div>
+                <label>CORREO</label>
+                <br>
+                <input type="email" placeholder="" name="correo" required>
+            </div>
+        </div>
+
+        <!-- ENTRADA DE DATOS: CONTRASEÑA Y SEXO -->
+        <div class="tercerosDatos">
+            <div>
+                <label>CONTRASEÑA</label>
+                <br>
+                <input type="password" placeholder="" name="contrasena" minlength="8" maxlength="20" required>
+            </div>
+            <div class="sexoIndividuo">
+                <label>SEXO:</label>
+                <br>
+                <select id="selector" name="opcion" required>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- DATOS DE ACEPTACIÓN DE TERMINOS -->
+        <div class="aceptacionDeTerminos">
+            <div class="casillaAceptacion"><input type="checkbox" class="casilla" required></div>
+            <div id="terminosycondiciones">Al crear la cuenta acepto los <u>Terminos & Condiciones</u></div>
+        </div>
+
+        <!-- BOTON PARA CREAR LA CUENTA -->
+        <div class="crearCuenta"><button type="submit">CREAR CUENTA</button></div>
+
+        <!-- OPCIÓN PARA INICIAR SESIÓN -->
+        <div class="inicioDeSesion">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></div>
+
+        <!-- BOTON DE REGRESO -->
+        <div class="iconoRegreso"><a href="index.html"><img src="/images/ICONO-REGRESO.jpg" alt="regreso" width="80px" height="80px"></a></div>
+    </form>
+</body>
+
+</html>

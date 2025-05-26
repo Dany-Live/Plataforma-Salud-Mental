@@ -1,0 +1,316 @@
+/*
+    * Hoja de estilos de: stylesLogin.html
+*/
+
+/****************************************FUENTES PERSONALIZADAS****************************************/
+@font-face
+{
+    font-family: 'FuenteRobot';
+    src: url('/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
+body 
+{
+    margin: 0px;
+    font-family: 'FuenteUbuntuRegular';
+}
+/******************************************************************************************************/
+
+/*********************************AJUSTE DE LOS 2 FONDOS DE LA PÁGINA**********************************/
+/*Estilo de los 2 fondos*/
+.fondosDivididos
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+}
+
+/*Estilo del fondo izquierdo*/
+.izquierda
+{
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 957px;
+    width: 960px;
+}
+
+/*Estilo del fondo derecho*/
+.derecha
+{
+    background-image: url('/images/FONDO-SESION.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1400px 957px;
+    height: 957px;
+    width: 955px;
+}
+/******************************************************************************************************/
+
+/**************************************ESTILO TEXTO DE BIENVENIDA**************************************/
+.textoBienvenida
+{  
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+}
+/******************************************************************************************************/
+
+/*****************************************AJUSTE DEL FORMULARIO****************************************/
+/*Estilo del correo y contraseña*/
+.ingresarCorreoContraseña
+{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-family: 'FuenteUbuntuLight';
+}
+
+/*Estilo de las entradas de datos*/
+.textoCorreo input, .textoContraseña input
+{
+    width: 700px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+/*Ajuste de separación entre el correo y la contraseña*/
+.textoCorreo { padding-bottom: 60px; }
+
+/*Ajuste de los datos recordar usuario*/
+.recordarUsuario
+{
+    position: absolute;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    top: 55%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+/*Estilo de la casilla de confirmación*/
+.casilla
+{
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    border: 1px solid black;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+/*Estilo al marcar la casilla de aceptación*/
+.casilla:checked 
+{ 
+    background-color: #243386;
+}
+
+/*Separación de la casilla de confirmación*/
+.casillaDeConfirmacion { padding-right: 10px; }
+
+/*Separación de la condición 1*/
+.condiciones1 
+{ 
+    padding-top: 15px;
+    padding-right: 300px;
+}
+
+/*Separación de la condición 2*/
+.condiciones2 
+{ 
+    font-family: 'FuenteRobot';
+    padding-top: 15px; 
+}
+
+/*Estilo del anclaje URL*/
+a 
+{
+    text-decoration: none;
+    color: inherit;
+}
+/******************************************************************************************************/
+
+/**********************************ESTILO DEL BOTON DE INICIO DE SESIÓN********************************/
+button
+{ 
+    font-size: 30px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 25px 10px 25px;
+}
+
+.botonDeSesion
+{
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL REGISTRO DE USUARIO************************************/
+.registroCuenta
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    position: absolute;
+    top: 72%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    gap: 0px 20px;
+}
+/******************************************************************************************************/
+
+/*******************************************BOTON DE REGRESO*******************************************/
+.regresoPagina
+{
+    position: absolute;
+    top: 85%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.regresoPagina img
+{
+    width: 80px; 
+    height: 80px;
+}
+/******************************************************************************************************/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************************PÁGINA RESPONSIVA*******************************************/
+@media (max-width:1280px)
+{
+    /*********************************AJUSTE DE LOS 2 FONDOS DE LA PÁGINA**********************************/
+    /*Estilo del fondo izquierdo*/
+    .izquierda
+    {
+        height: 591px;
+        width: 640px;
+    }
+
+    /*Estilo del fondo derecho*/
+    .derecha
+    {
+        background-size: 932px 638px;
+        height: 591px;
+        width: 640px;
+    }
+    /******************************************************************************************************/
+
+    /**************************************ESTILO TEXTO DE BIENVENIDA**************************************/
+    .textoBienvenida
+    {
+        font-size: 42px;
+    }
+    /******************************************************************************************************/
+
+    /*****************************************AJUSTE DEL FORMULARIO****************************************/
+    /*Estilo del correo y contraseña*/
+    .ingresarCorreoContraseña
+    {
+        font-size: 16px;
+    }
+
+    /*Estilo de las entradas de datos*/
+    .textoCorreo input, .textoContraseña input
+    {
+        width: 466px;
+        height: 26px;
+        font-size: 15px;
+    }
+
+    /*Ajuste de separación entre el correo y la contraseña*/
+    .textoCorreo { padding-bottom: 40px; }
+
+    /*Estilo de la casilla de confirmación*/
+    .casilla
+    {
+        width: 26px;
+        height: 26px;
+    }
+
+    /*Separación de la casilla de confirmación*/
+    .casillaDeConfirmacion { padding-right: 6px; }
+
+    /*Separación de la condición 1*/
+    .condiciones1 
+    { 
+        padding-top: 6px;
+        padding-right: 45px;
+        font-size: 15px;
+    }
+
+    /*Separación de la condición 2*/
+    .condiciones2 
+    { 
+        font-family: 'FuenteRobot';
+        padding-top: 6px; 
+        font-size: 15px;
+    }
+    /******************************************************************************************************/
+
+    /**********************************ESTILO DEL BOTON DE INICIO DE SESIÓN********************************/
+    button
+    { 
+        font-size: 20px;
+        padding: 6px 16px 6px 16px;
+    }
+    /******************************************************************************************************/
+
+    /************************************ESTILO DEL REGISTRO DE USUARIO************************************/
+    .registroCuenta
+    {
+        font-size: 14px;
+        gap: 0px 20px;
+    }
+    /******************************************************************************************************/
+
+    /*******************************************BOTON DE REGRESO*******************************************/
+    .regresoPagina img
+    {
+        width: 52px; 
+        height: 52px;
+    }
+    /******************************************************************************************************/
+}
+/******************************************************************************************************/

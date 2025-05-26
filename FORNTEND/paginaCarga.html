@@ -1,0 +1,35 @@
+<!-- Página de carga -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando...</title>
+  <link rel="stylesheet" href="stylePaginaCarga.css">
+
+  <!-- SCRIPT DE LA TRANSICIÓN -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nextPage = params.get("next");
+
+    setTimeout(() => {
+      if (nextPage) 
+      {
+        window.location.href = nextPage;
+      } 
+      else
+      {
+        document.body.innerText = "Página destino no encontrada";
+      }
+    }, 2000);
+  </script>
+</head>
+
+<body>
+    <!-- TEXTO DE LA TRANSICIÓN -->
+    <div class="textoTransicion"><center>Tu Salud Mental Es Tan Vital Como Tu Salud Física, No La Descuides...</center></div>
+</body>
+
+</html>

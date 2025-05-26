@@ -1,0 +1,270 @@
+/*
+    * Hoja de estilos de: stylesSeleccionEspecialistas.html
+*/
+
+/****************************************FUENTES PERSONALIZADAS****************************************/
+@font-face
+{
+    font-family: 'FuenteRobot';
+    src: url('/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
+body 
+{
+    margin: 0px;
+    font-family: 'FuenteUbuntuRegular';
+    overflow: hidden;
+}
+/******************************************************************************************************/
+
+/****************************************ESTILO DEL ENCABEZADO*****************************************/
+/*Estilo de la cabecera*/
+.cabeceraPagina
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 30px;
+}
+
+/*Ajustes del logo superior izquierdo*/
+.logoIzquierdo { transform: rotate(180deg); }
+.logoIzquierdo img
+{ 
+    width: 250px;
+    height: 230px;
+}
+
+/*Estilo de los botones*/
+button
+{
+    font-size: 30px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0px 20px 0px 20px;
+}
+
+/*Estilo de las entradas de datos*/
+input
+{
+    width: 1120px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+/*Ajustes de los elementos del encabezado*/
+.buscador { padding-top: 40px; }
+.iconoRegreso { padding-top: 25px; }
+.iconoUsuario { padding-top: 25px; }
+#opcion { padding-top: 45px; }
+/******************************************************************************************************/
+
+/********************************ESTILO DEL ENCABEZADO DE ESPECIALISTAS********************************/
+.especialistasIconos
+{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 0px 250px;
+}
+
+.psicologo img, .medico img, .terapeuta img
+{
+    width: 300px;
+    height: 300px;
+}
+
+#subtexto 
+{ 
+    font-size: 30px;
+    font-family: 'FuenteUbuntuLight';
+}
+
+.texto1
+{
+    color: white;
+    padding: 30px;
+    background-color: #261d60;
+    clip-path: inset(10% round 30px);
+}
+
+.texto2
+{
+    color: white;
+    background-color: #3e4685;
+    clip-path: inset(10% round 30px);
+    padding: 30px 70px 20px 70px;
+}
+
+.texto3
+{
+    color: white;
+    padding: 30px;
+    background-color: #3e7dcd;
+    clip-path: inset(10% round 30px);
+}
+
+.logoInferiorDerecho
+{
+    position: absolute;
+    top: 86%;
+    left: 89%;
+    transform: translate(-50%, -50%);
+}
+
+.logoInferiorDerecho img
+{
+    width: 411px;
+    height: 264px;
+}
+/******************************************************************************************************/
+
+/********************************ESTILO DEL BOTON PARA AGENDAR LA CITA*********************************/
+.botonDeCita
+{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL FOOTER DE LA PÁGINA************************************/
+/*Estilo del footer*/
+footer 
+{
+    background-color: #243386;
+    color: white;
+    font-size: 30px;
+    width: 30px;
+    position: absolute;
+    top: 925px;
+    left: 0px;
+    padding-left: 1890px;
+}
+/******************************************************************************************************/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************************PÁGINA RESPONSIVA*******************************************/
+@media (max-width:1280px)
+{
+    /****************************************ESTILO DEL ENCABEZADO*****************************************/
+    /*Estilo de la cabecera*/
+    .cabeceraPagina { gap: 20px; }
+
+    /*Ajustes del logo superior izquierdo*/
+    .logoIzquierdo { transform: rotate(180deg); }
+    .logoIzquierdo img
+    { 
+        width: 150px;
+        height: 130px;
+    }
+
+    /*Estilo de los botones*/
+    button { font-size: 20px; }
+
+    /*Estilo de las entradas de datos*/
+    input
+    {
+        width: 700px;
+        height: 20px;
+        font-size: 15px;
+    }
+
+    /*Ajustes de los elementos del encabezado*/
+    .buscador { padding-top: 40px; }
+    .iconoRegreso { padding-top: 25px; }
+    .iconoUsuario { padding-top: 25px; }
+    #opcion { padding-top: 45px; }
+    /******************************************************************************************************/
+
+    /********************************ESTILO DEL ENCABEZADO DE ESPECIALISTAS********************************/
+    .especialistasIconos
+    {
+        gap: 0px 150px;
+    }
+
+    .psicologo img, .medico img, .terapeuta img
+    {
+        width: 150px;
+        height: 150px;
+    }
+
+    #subtexto 
+    { 
+        font-size: 20px;
+        font-family: 'FuenteUbuntuLight';
+    }
+
+    .logoInferiorDerecho
+    {
+        position: absolute;
+        top: 80%;
+        left: 89%;
+        transform: translate(-50%, -50%);
+    }
+
+    .texto1
+    {
+        padding: 25px;
+    }
+
+    .texto2
+    {
+        padding: 25px 70px 20px 70px;
+    }
+
+    .texto3
+    {
+        padding: 25px;
+    }
+
+    .logoInferiorDerecho img
+    {
+        width: 211px;
+        height: 164px;
+    }
+    /******************************************************************************************************/
+
+    /******************************************ESTILO DEL FOOTER*******************************************/
+    footer
+    {
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        padding: 0px 10px 0px 1253px;
+    }
+    /******************************************************************************************************/
+}
+/******************************************************************************************************/
