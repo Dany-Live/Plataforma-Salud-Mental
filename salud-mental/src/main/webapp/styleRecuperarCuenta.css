@@ -31,7 +31,8 @@
 /************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'FuenteUbuntuRegular';
 }
 /******************************************************************************************************/
@@ -65,8 +66,9 @@ body
 .logoInferiorDerecho
 {
     position: absolute;
-    left: 1616px;
-    top: 670px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transform: rotate(0deg);
 }
 
@@ -172,5 +174,112 @@ footer
     top: 925px;
     left: 0px;
     padding-left: 1890px;
+}
+/******************************************************************************************************/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************************PÁGINA RESPONSIVA*******************************************/
+@media (max-width:1280px)
+{
+    /************************************ESTILO DEL TITULO DE LA PÁGINA************************************/
+    /*Estilo del titulo de la página*/
+    .tituloPagina
+    {
+        font-size: 45px;
+        padding-top: 35px;
+    }
+    /******************************************************************************************************/
+
+    /********************************ESTILO DE LAS DECORACIONES DE LA PÁGINA*******************************/
+    .logoSuperiorIzquierdo img, .logoInferiorDerecho img
+    {
+        width: 200px;
+        height: 150px;
+    }
+
+    /*Estilo del logo inferior derecho*/
+    .logoInferiorDerecho
+    {
+        position: absolute;
+        top: 70%;
+        left: 84%;
+        transform: translate(-50%, -50%);
+        transform: rotate(0deg);
+    }
+
+    .logoInferiorIzquierdo
+    {
+        position: absolute;
+        top: 47%;
+        left: 0%;
+    }
+    /******************************************************************************************************/
+
+    /************************************AJUSTE DE LA ENTRADA DE DATOS*************************************/
+    /*Estilo de la entrada de datos*/
+    .entradaDeDatos
+    {
+        font-size: 20px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /*Estilo de las entradas de datos*/
+    input
+    {
+        height: 30px;
+        font-size: 20px;
+    }
+
+    /*Estilo del select*/
+    select
+    {
+        font-size: 20px;
+    }
+
+    .textoCorreo {padding-bottom: 50px; }
+    /******************************************************************************************************/
+
+    /*********************************ESTILO DEL BOTON DE RECUPERAR CUENTA*********************************/
+    /*Estilo del boton*/
+    button
+    { 
+        font-size: 20px;
+    }
+
+    /*Ajuste del boton de recuperar cuenta*/
+    .botonDeRecuperacion
+    {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /******************************************************************************************************/
+
+    /*******************************************BOTON DE REGRESO*******************************************/
+    .regresoPagina
+    {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /******************************************************************************************************/
+
+    /******************************************ESTILO DEL FOOTER*******************************************/
+    footer
+    {
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        padding: 0px 10px 0px 1239px;
+    }
+    /******************************************************************************************************/
 }
 /******************************************************************************************************/

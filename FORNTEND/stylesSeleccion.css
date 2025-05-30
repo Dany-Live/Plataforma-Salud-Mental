@@ -126,10 +126,6 @@ body
     top: 50%;
     left: 50%;
     transform: translate(-50%, 280%);
-    border-radius: 50%;
-    border: 4px solid #243386;
-    overflow: hidden;
-    background-color: #243386;
 }
 
 /*Ajuste de la imagen del icono de regreso*/
@@ -221,8 +217,8 @@ a { color: inherit; }
     /*Ajuste de la imagen del icono de regreso*/
     .iconoRegreso img
     {
-        width: 74px;
-        height: 74px;
+        width: 80px;
+        height: 80px;
     }
     /******************************************************************************************************/
 }

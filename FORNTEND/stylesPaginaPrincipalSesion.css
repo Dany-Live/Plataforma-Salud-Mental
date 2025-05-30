@@ -31,10 +31,14 @@
 /************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
-    margin: 0px;
+    margin: 0; 
+    padding: 0; 
+    height: 100vh; 
+    background-image: url('/images/FONDO-PRINCIPAL-SESION.jpg'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
     font-family: 'FuenteUbuntuLight';
-    background-image: url('/images/FONDO-PRINCIPAL-SESION.jpg');
-    background-repeat: no-repeat;
 }
 /******************************************************************************************************/
 
@@ -52,7 +56,7 @@ body
 button
 {
     font-size: 30px;
-    background-color: #243386;
+    background-color: #AD4C41;
     color: white;
     border: none;
     border-radius: 50px;
@@ -94,5 +98,47 @@ a
     top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+/******************************************************************************************************/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************************PÁGINA RESPONSIVA*******************************************/
+@media (max-width:1280px)
+{
+    /****************************************ESTILOS DEL ENCABEZADO****************************************/
+    /*Estilo general del boton*/
+    button
+    {
+        font-size: 20px;
+        padding: 2px 25px;
+    }
+
+    /*Ajuste del logo*/
+    #logo img
+    {
+        width: 133px;
+        height: 106px;
+    }
+
+    /*Espaciado entre el logo y los botones de opción*/
+    #logo 
+    { 
+        padding-top: 10px;
+        padding-right: 390px;
+    }
+    #opcion { padding-top: 20px; }
+    /******************************************************************************************************/
+
+    /************************************ESTILO DEL TEXTO DE BIENVENIDA************************************/
+    .textoBienvenida
+    {
+        position: absolute;
+        font-size: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    /******************************************************************************************************/
 }
 /******************************************************************************************************/

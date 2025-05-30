@@ -31,7 +31,8 @@
 /************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'FuenteUbuntuRegular';
 }
 /******************************************************************************************************/
@@ -195,5 +196,129 @@ footer
     top: 925px;
     left: 0px;
     padding-left: 1890px;
+}
+/******************************************************************************************************/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************************PÁGINA RESPONSIVA*******************************************/
+@media (max-width:1280px)
+{
+    /*************************************CONFIGURACIÓN DE LA CABECERA*************************************/
+    /*Estilo de la cabecera*/
+    .cabeceraPagina
+    {
+        padding-top: 10px;
+        gap: 10px;
+    }
+
+    /*Estilo de las entradas de datos*/
+    input
+    {
+        width: 800px;
+        height: 30px;
+        border-radius: 50px;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    /*Ajuste de los iconos*/
+    .iconoRegreso img, .iconoUsuario img
+    {
+        width: 80px;
+        height: 80px;
+    }
+
+    /*Estilo de los botones*/
+    button
+    {
+        font-size: 20px;
+    }
+
+    /*Ajustes buscador y boton*/
+    .buscador 
+    {
+        padding-right: 40px;
+    }
+    #opcion { padding-top: 25px; }
+    /******************************************************************************************************/
+
+    /**********************************ESTILO DE LOS SUBTEMAS DE LA PÁGINA*********************************/
+    /*Estilo subtemas*/
+    .subTemas
+    {
+        padding-top: 40px;
+    }
+
+    /*Estilo del texto de informe*/
+    .textoDeInforme
+    {
+        font-size: 20px;
+    }
+
+    /*Ajuste de la imagen del subtema*/
+    .imagenDelTema { padding-left: 10px; }
+    .imagenDelTema img
+    {
+        width: 284px;
+        height: 214px;
+    }
+    /******************************************************************************************************/
+
+    /****************************************ESTILO DE LOS SUBTEMAS****************************************/
+    .actividadesInformativas
+    {
+        font-size: 20px;
+        position: absolute;
+        top: 64%;
+        left: 0%;
+    }
+
+    #textos
+    {
+        padding: 10px 100px 10px 100px;
+    }
+    /******************************************************************************************************/
+
+    /******************************AJUSTES DE LOS NÚMEROS DE LAS ACTIVIDADES*******************************/
+    .numeroActividades
+    {
+        position: absolute;
+        top: 64%;
+        left: 3%;
+    }
+
+    #numeros
+    {
+        text-align: center;
+        font-size: 20px;
+        padding: 10px 15px 10px 15px;
+    }
+    /******************************************************************************************************/
+
+    /****************************************AJUSTE DE LOS ICONOS******************************************/
+    .progresoIcon img, .chatIcon img, .citasIcon img
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    #nombresIconosPrincipales
+    {
+        font-size: 20px;
+    }
+    /******************************************************************************************************/
+
+    /******************************************ESTILO DEL FOOTER*******************************************/
+    footer
+    {
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        padding: 0px 10px 0px 1239px;
+    }
+    /******************************************************************************************************/
 }
 /******************************************************************************************************/

@@ -171,3 +171,100 @@ footer
     padding-left: 1890px;
 }
 /******************************************************************************************************/
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+/******************************************PÁGINA RESPONSIVA*******************************************/
+@media (max-width:1280px)
+{
+    /****************************************ESTILO DEL ENCABEZADO*****************************************/
+    /*Estilo de la cabecera*/
+    .cabeceraPagina { gap: 15px; }
+
+    /*Ajustes del logo superior izquierdo*/
+    .logoIzquierdo { transform: rotate(180deg); }
+    .logoIzquierdo img
+    { 
+        width: 150px;
+        height: 130px;
+    }
+
+    /*Estilo de los botones*/
+    button { font-size: 20px; }
+
+    /*Estilo de las entradas de datos*/
+    input
+    {
+        width: 700px;
+        height: 20px;
+        font-size: 15px;
+    }
+
+    /*Ajustes de los elementos del encabezado*/
+    .buscador { padding-top: 50px; }
+    .iconoRegreso { padding-top: 25px; }
+    .iconoUsuario { padding-top: 25px; }
+    #opcion { padding-top: 45px; }
+    /******************************************************************************************************/
+
+    /********************************ESTILO DEL ENCABEZADO DE ESPECIALISTAS********************************/
+    .especialistasIconos
+    {
+        gap: 0px 150px;
+    }
+
+    .psicologo img, .medico img, .terapeuta img
+    {
+        width: 150px;
+        height: 150px;
+    }
+
+    #subtexto 
+    { 
+        font-size: 20px;
+        font-family: 'FuenteUbuntuLight';
+    }
+
+    .logoInferiorDerecho
+    {
+        position: absolute;
+        top: 80%;
+        left: 89%;
+        transform: translate(-50%, -50%);
+    }
+
+    .texto1
+    {
+        padding: 25px;
+    }
+
+    .texto2
+    {
+        padding: 25px 40px 20px 40px;
+    }
+
+    .texto3
+    {
+        padding: 25px;
+    }
+
+    .logoInferiorDerecho img
+    {
+        width: 211px;
+        height: 164px;
+    }
+    /******************************************************************************************************/
+
+    /******************************************ESTILO DEL FOOTER*******************************************/
+    footer
+    {
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        padding: 0px 10px 0px 1253px;
+    }
+    /******************************************************************************************************/
+}
+/******************************************************************************************************/
