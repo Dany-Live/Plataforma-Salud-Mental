@@ -21,7 +21,7 @@
     <div class="logoInferiorIzquierdo"><img src="/salud-mental/images/SEGUNDO-LOGO-REGISTRO.jpg" alt="imagenRegistro2"></div>
 
     <!-- FORMULARIO DE LA PÁGINA -->
-    <form action="">
+    <form action="/salud-mental/inscripcion" method="POST">
         <!-- ENTRADA DE DATOS: NOMBRES, APELLIDOS Y FECHA DE NACIMIENTO -->
         <div class="primerosDatos">
             <div>
@@ -73,11 +73,11 @@
                 <input type="password" placeholder="" name="contrasena" minlength="8" maxlength="20" required>
             </div>
             <div class="sexoIndividuo">
-                <label>SEXO:</label>
+                <label>SEXO</label>
                 <br>
                 <select id="selector" name="opcion" required>
-                    <option value="op1">Hombre</option>
-                    <option value="op2">Mujer</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
                 </select>
             </div>
         </div>
@@ -90,13 +90,13 @@
 
         <!-- BOTON PARA CREAR LA CUENTA -->
         <div class="crearCuenta"><button type="submit">CREAR CUENTA</button></div>
-
-        <!-- OPCIÓN PARA INICIAR SESIÓN -->
-        <div class="inicioDeSesion">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></div>
-
-        <!-- BOTON DE REGRESO -->
-        <div class="iconoRegreso"><a href="index.html"><img src="/salud-mental/icons/HOME.gif"></a></div>
     </form>
+
+    <!-- OPCIÓN PARA INICIAR SESIÓN -->
+    <div class="inicioDeSesion">¿Ya tienes cuenta? <a href="login.html">Inicia Sesión</a></div>
+
+    <!-- BOTON DE REGRESO -->
+    <div class="iconoRegreso"><a href="index.html"><img src="/salud-mental/icons/HOME.gif"></a></div>
 </body>
 
 </html>

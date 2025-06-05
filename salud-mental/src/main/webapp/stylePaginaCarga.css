@@ -5,71 +5,131 @@
 /****************************************FUENTES PERSONALIZADAS****************************************/
 @font-face
 {
-    font-family: 'FuenteRobot';
-    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'FuenteRobot';
+  src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face
 {
-    font-family: 'FuenteUbuntuRegular';
-    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'FuenteUbuntuRegular';
+  src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face
 {
-    font-family: 'FuenteUbuntuLight';
-    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'FuenteUbuntuLight';
+  src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 /******************************************************************************************************/
 
 /************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
-body 
-{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    font-family: 'FuenteUbuntuLight';
-    background-image: url('/salud-mental/images/FONDO-TRANSICION.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+body
+{ 
+  font-family: 'FuenteUbuntuLight';
+  font-weight: 900;
+  overflow: hidden;
 }
 /******************************************************************************************************/
 
-/*****************************************TEXTO DE TRANSICIÓN******************************************/
-.textoTransicion
+/************************************ESTILO DE LA IMAGEN DE FONDO**************************************/
+.fondoImagen
 {
-    font-family: 'FuenteRobot';
-    font-size: 60px;
-    position: absolute;
-    left: 70%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0%;
+  background-image: url('/salud-mental/images/FONDO-CARGA.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.3;
 }
 /******************************************************************************************************/
 
-/*------------------------------------------------------------------------------------------------------------------------*/
-
-/******************************************PÁGINA RESPONSIVA*******************************************/
-@media (max-width:1280px)
+/************************************ESTILO DE LA ANIMACIÓN DE CARGA***********************************/
+/*Texto de carga*/
+.cargando
 {
-    /*****************************************TEXTO DE TRANSICIÓN******************************************/
-    .textoTransicion
-    {
-        font-family: 'FuenteRobot';
-        font-size: 40px;
-        position: absolute;
-        left: 70%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-    /******************************************************************************************************/
+  position: relative;
+  margin-top: 2em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase
+}
+
+/*Estilo de las barras de carga*/
+.contenedor-loader
+{  
+  height: 6em;
+}
+
+/*Estilo del contenedor de carga*/
+#contenedor
+{
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+/*Animaciones de la barra de carga*/
+.loader, .loader:before, .loader:after 
+{
+  background: #243386;
+  animation: cargando 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+/*Animaciones de la barra de carga*/
+.loader:before, .loader:after
+{
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+/*Estilo de la barra de carga*/
+.loader:before 
+{
+  left: -1.5em;
+}
+
+/*Estilo y animación de la barra de carga*/
+.loader 
+{
+  text-indent: -9999em;
+  margin: 40% auto;
+  position: relative;
+  font-size: 11px;
+  animation-delay: 0.16s;
+}
+
+/*Tiempo de animación de la barra de carga*/
+.loader:after 
+{
+  left: 1.5em;
+  animation-delay: 0.32s;
+}
+
+/*Animación principal de carga*/
+@keyframes cargando 
+{
+  0%,
+  80%,
+  100% 
+  {
+    box-shadow: 0 0 #243386;
+    height: 4em;
+  }
+  40% 
+  {
+    box-shadow: 0 -2em #ffffff;
+    height: 5em;
+  }
 }
 /******************************************************************************************************/

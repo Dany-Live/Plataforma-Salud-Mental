@@ -23,13 +23,22 @@
       {
         document.body.innerText = "Página destino no encontrada";
       }
-    }, 2000);
+    }, 1000);
   </script>
 </head>
 
 <body>
-    <!-- TEXTO DE LA TRANSICIÓN -->
-    <div class="textoTransicion"><center>Tu Salud Mental Es Tan Vital Como Tu Salud Física, No La Descuides...</center></div>
+  <!-- IMAGEN DE FONDO -->
+  <div class="fondoImagen"></div>
+
+  <!-- ANIMACIÓN DE CARGA -->
+  <div id="contenedor">
+    <div class="contenedor-loader">
+      <div class="loader"></div>
+    </div>
+    
+    <div class="cargando">Cargando...</div>
+  </div>
 </body>
 
 </html>

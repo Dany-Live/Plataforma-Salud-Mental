@@ -20,7 +20,7 @@ public class RegistroServlet extends HttpServlet
         String contrasena = request.getParameter("contrasena"); //¡Ojo con la ñ!
         String sexo = request.getParameter("opcion"); // Directamente obtendrás "Hombre" o "Mujer"
 
-        try (Connection conn = DatabaseUtil.getConnection()) 
+        try (Connection conn = DatabaseUtil.getConnection())
         {
             String sql = "INSERT INTO usuarios (nombre, apellido, fecha_nacimiento, telefono, institucion, email, contrasena, sexo) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
