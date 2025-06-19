@@ -25,6 +25,7 @@ CREATE TABLE profesionistas (
     institucion VARCHAR(100) NOT NULL,
     contrasena VARCHAR(100) NOT NULL,
     sexo VARCHAR(10) NOT NULL,
+    especialista VARCHAR(20) NOT NULL,
     fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

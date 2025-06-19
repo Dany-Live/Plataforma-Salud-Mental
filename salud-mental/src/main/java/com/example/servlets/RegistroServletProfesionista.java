@@ -20,10 +20,11 @@ public class RegistroServletProfesionista extends HttpServlet
         String instituto = request.getParameter("instituto");
         String contrasena = request.getParameter("contrasena");
         String sexo = request.getParameter("opcion");
+        String especialista = request.getParameter("especialista");
 
         try (Connection conn = DatabaseUtil.getConnection())
         {
-            String sql = "INSERT INTO profesionistas (nombre, apellido, fecha_nacimiento, telefono, cedula, email, institucion, contrasena, sexo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO profesionistas (nombre, apellido, fecha_nacimiento, telefono, cedula, email, institucion, contrasena, sexo, especialista) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, nombre);
             statement.setString(2, apellido);
@@ -34,12 +35,13 @@ public class RegistroServletProfesionista extends HttpServlet
             statement.setString(7, instituto);
             statement.setString(8, contrasena);
             statement.setString(9, sexo);
+            statement.setString(10, especialista);
 
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) 
             {
                 // Redirige a una página de sesión
-                response.sendRedirect("paginaPrincipalSesion.html");
+                response.sendRedirect("paginaCarga.html?next=paginaPrincipalSesion.html");
                 return; // Termina la ejecución del servlet
             }
         }

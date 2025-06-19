@@ -119,8 +119,12 @@ body
     font-size: 30px;
 }
 
-/*Ajuste del icono de regreso*/
-.iconoRegreso
+/*Estilo del anclaje URL*/
+a { color: inherit; }
+/******************************************************************************************************/
+
+/*******************************************BOTON DE REGRESO*******************************************/
+.regresoPagina #icono-animado, .regresoPagina #icono-estatico
 {
     position: absolute;
     top: 50%;
@@ -128,16 +132,38 @@ body
     transform: translate(-50%, 280%);
 }
 
-/*Ajuste de la imagen del icono de regreso*/
-.iconoRegreso img
+.regresoPagina #icono-animado
 {
-    width: 60px;
-    height: 60px;
-    padding: 15px;
+  width: 80px; 
+  height: 80px;
 }
 
-/*Estilo del anclaje URL*/
-a { color: inherit; }
+.regresoPagina #icono-estatico
+{
+  width: 60px; 
+  height: 60px;
+}
+
+#icono-animado
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.regresoPagina:hover #icono-animado
+{
+  opacity: 1;
+}
+
+.regresoPagina:hover #icono-estatico
+{
+  opacity: 0;
+}
 /******************************************************************************************************/
 
 /*------------------------------------------------------------------------------------------------------------------------*/
@@ -204,22 +230,14 @@ a { color: inherit; }
         font-family: 'FuenteUbuntuLight';
         font-size: 20px;
     }
+    /******************************************************************************************************/
 
-    /*Ajuste del icono de regreso*/
-    .iconoRegreso
+    .regresoPagina #icono-animado, .regresoPagina #icono-estatico
     {
         position: absolute;
-        top: 30%;
+        top: 90%;
         left: 50%;
-        transform: translate(-50%, 250%);
+        transform: translate(-50%, -50%);
     }
-
-    /*Ajuste de la imagen del icono de regreso*/
-    .iconoRegreso img
-    {
-        width: 80px;
-        height: 80px;
-    }
-    /******************************************************************************************************/
 }
 /******************************************************************************************************/

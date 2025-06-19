@@ -39,7 +39,7 @@ public class RegistroServlet extends HttpServlet
                 //response.getWriter().println("¡Registro exitoso!");
 
                 // Redirige a una página de sesión
-                response.sendRedirect("paginaPrincipalSesion.html");
+                response.sendRedirect("paginaCarga.html?next=paginaPrincipalSesion.html");
                 return; // Termina la ejecución del servlet
             }
         } 

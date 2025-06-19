@@ -102,6 +102,141 @@
 }
 /******************************************************************************************************/
 
+/******************************************************************************************************/
+/* Estilos para el popup de contactos */
+.contactos-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.contactos-contenido {
+    background-color: #f8f8f8;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    color: #333;
+}
+
+.cerrar-contactos {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cerrar-contactos:hover {
+    color: #333;
+}
+
+.contactos-contenido h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.contactos-contenido ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contactos-contenido li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.contactos-contenido li:before {
+    content: "•";
+    color: #2c3e50;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Estilos generales para ambos popups (Información y Contactos) */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.popup-contenido {
+    background-color: #f8f8f8;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    color: #333;
+}
+
+.cerrar-popup {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cerrar-popup:hover {
+    color: #333;
+}
+
+.popup-contenido h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.popup-contenido ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.popup-contenido li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.popup-contenido p {
+    text-align: justify;
+}
+
+.popup-contenido li:before {
+    content: "•";
+    color: #2c3e50;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+/******************************************************************************************************/
+
 /************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
 body 
 {
@@ -214,7 +349,15 @@ a
     padding-right: 560px;
     z-index: 1;
 }
-#opcion { padding-top: 20px; z-index: 1;}
+#opcion 
+{
+    padding-top: 20px; 
+    z-index: 1;   
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#opcion:hover { transform: scale(1.05); /* Aumenta el tamaño un 5% */ }
 
 /************************************ESTILO DEL TEXTO DE BIENVENIDA************************************/
 .textoBienvenida

@@ -1,12 +1,24 @@
 <!-- Página de selección de tipo de cuenta: seleccionCuenta.html -->
  
+<!--
+● <!DOCTYPE html>: Define el tipo de documento y la versión de HTML que se está utilizando: HTML5.
+● <html lang="es">:
+    ◐ <html>: Es el elemento raíz.
+    ◐ lang="es": Especifica que el idioma principal del contenido de la página es el español,
+-->
 <!DOCTYPE html>
 <html lang="es">
 
+<!--
+● <meta charset="UTF-8">: Define la codificación de caracteres del documento como UTF-8.
+● <meta name="viewport" content="width=device-width, initial-scale=1.0">: Configura la vista del navegador en dispositivos móviles. width=device-width ajusta el ancho del viewport al ancho del dispositivo, y initial-scale=1.0 establece el nivel de zoom inicial.
+● <title>Salud Mental</title>: Título de la página
+● <link rel="stylesheet" href="stylesIndex.css">: Enlaza un archivo CSS externo.
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Salud Mental</title>
     <link rel="stylesheet" href="stylesSeleccion.css">
 </head>
 
@@ -33,8 +45,10 @@
         <div class="logoInferiorDerecho"><img src="/salud-mental/images/DECORACON-SELECCION.png" alt="decoracion2"></div>
     </div>
 
-    <div class="iconoRegreso">
-        <a href="index.html"><img src="/salud-mental/icons/HOME.gif" alt="regreso"></a>
+    <!-- ICONO DE REGRESO A LA PÁGINA PRINCIPAL -->
+    <div class="regresoPagina">
+        <img src="/salud-mental/icons/HOME.png" id="icono-estatico">
+        <a href="index.html"><img src="/salud-mental/icons/HOME.gif" id="icono-animado"></a>
     </div>
 </body>
 

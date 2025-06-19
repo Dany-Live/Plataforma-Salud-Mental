@@ -86,7 +86,13 @@ a
     padding-top: 10px;
     padding-right: 710px;
 }
-#opcion { padding-top: 20px; }
+#opcion 
+{ 
+    padding-top: 20px;     
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#opcion:hover { transform: scale(1.05); /* Aumenta el tamaño un 5% */ }
 /******************************************************************************************************/
 
 /************************************ESTILO DEL TEXTO DE BIENVENIDA************************************/

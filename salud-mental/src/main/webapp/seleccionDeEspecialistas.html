@@ -1,8 +1,20 @@
 <!-- Página para seleccionar y agendar la cita con el especialista: seleccionEspecialista.html -->
 
+<!--
+● <!DOCTYPE html>: Define el tipo de documento y la versión de HTML que se está utilizando: HTML5.
+● <html lang="es">:
+    ◐ <html>: Es el elemento raíz.
+    ◐ lang="es": Especifica que el idioma principal del contenido de la página es el español,
+-->
 <!DOCTYPE html>
 <html lang="es">
 
+<!--
+● <meta charset="UTF-8">: Define la codificación de caracteres del documento como UTF-8.
+● <meta name="viewport" content="width=device-width, initial-scale=1.0">: Configura la vista del navegador en dispositivos móviles. width=device-width ajusta el ancho del viewport al ancho del dispositivo, y initial-scale=1.0 establece el nivel de zoom inicial.
+● <title>Salud Mental</title>: Título de la página
+● <link rel="stylesheet" href="stylesIndex.css">: Enlaza un archivo CSS externo.
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,27 +28,80 @@
         <div class="logoIzquierdo"><img src="/salud-mental/images/DECORACION.png" alt="decoracion1"></div>
         <div class="buscador"><input type="text" name="query" placeholder="Buscar"></div>
         <div class="iconoRegreso"><a href="paginaPrincipalSesion.html"><img src="/salud-mental/icons/HOME.gif" alt="regreso" width="80px" height="80px"></a></div>
-        <div class="iconoUsuario"><a href=""><img src="/salud-mental/icons/ICONO-USUARIO.gif" alt="usuario" width="80px" height="80px"></a></div>
+        <div class="iconoUsuario"><a href="cuentaUsuario.html"><img src="/salud-mental/icons/ICONO-USUARIO.gif" alt="usuario" width="80px" height="80px"></a></div>
         <div id="opcion"><button>CONTACTOS</button></div>
     </div>
 
     <!-- ESPECIALISTAS -->
     <div class="especialistasIconos">
-        <div class="psicologo"><CEnter><img src="/salud-mental/icons/ICONO-PSICOLOGO.gif" alt="iconpsicologo"></CEnter></div>
-        <div class="medico"><CEnter><img src="/salud-mental/icons/ICONO-MEDICO-PRIMARIO.gif" alt="iconmedico"></CEnter></div>
-        <div class="terapeuta"><CEnter><img src="/salud-mental/icons/ICONO-TERAPEUTA.gif" alt="iconterapeuta"></CEnter></div>
-        <div id="subtexto" class="texto1"><CEnter>PSICÓLOGOS</CEnter></div>
-        <div id="subtexto" class="texto2"><CEnter>MÉDICOS PRIMARIOS</CEnter></div>
+        <div class="psicologo" id="psicologoBtn"><center><img src="/salud-mental/icons/ICONO-PSICOLOGO.gif" alt="iconpsicologo"></center></div>
+        <div class="medico" id="medicoBtn"><center><img src="/salud-mental/icons/ICONO-MEDICO-PRIMARIO.gif" alt="iconmedico"></center></div>
+        <div class="terapeuta" id="terapeutaBtn"><center><img src="/salud-mental/icons/ICONO-TERAPEUTA.gif" alt="iconterapeuta"></center></div>
+        <div id="subtexto" class="texto1"><center>PSICÓLOGOS</center></div>
+        <div id="subtexto" class="texto2"><center>MÉDICOS PRIMARIOS</center></div>
         <div id="subtexto" class="texto3"><center>TERAPEUTAS</center></div>
+    </div>
+
+    <!-- LISTA DE ESPECIALISTAS -->
+    <div id="modalEspecialistas" class="modal">
+        <div class="modal-content">
+            <span class="close" id="cerrarModal">&times;</span>
+            <div id="contenidoEspecialistas"></div>
+        </div>
     </div>
 
     <!-- FONDO INFERIOR DERECHO -->
     <div class="logoInferiorDerecho"><img src="/salud-mental/images/FONDO-ESPECIALISTAS.jpg" alt="decoracion2"></div>
 
     <!-- BOTON DE AGENDAR CITA -->
-    <div class="botonDeCita"><button>AGENDAR CITA</button></div>
+    <div class="botonDeCita"><a href="https://www.paypal.com/mx/digital-wallet/send-receive-money"><button>AGENDAR CITA</button></a></div>
 
     <footer>©</footer>
+
+    <script>
+        document.getElementById("psicologoBtn").addEventListener("click", function() {
+            obtenerEspecialistas("PSICOLOGO");
+        });
+        document.getElementById("medicoBtn").addEventListener("click", function() {
+            obtenerEspecialistas("MEDICOPRIMARIO");
+        });
+        document.getElementById("terapeutaBtn").addEventListener("click", function() {
+            obtenerEspecialistas("TERAPEUTA");
+        });
+
+        function obtenerEspecialistas(tipo) {
+            fetch(`/salud-mental/SaludMentalServlet?especialista=${encodeURIComponent(tipo)}`)
+                .then(response => response.json())
+                .then(data => mostrarEspecialistas(data, tipo))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function mostrarEspecialistas(lista, tipo) {
+            const contenedor = document.getElementById("contenidoEspecialistas");
+            contenedor.innerHTML = `<h2>Lista de ${tipo}</h2>`;
+            
+            if (lista.length === 0) {
+                contenedor.innerHTML += "<p>No hay especialistas disponibles.</p>";
+            } else {
+                lista.forEach(especialista => {
+                    contenedor.innerHTML += `
+                        <div class="especialista">
+                            <p><strong>Nombre:</strong> ${especialista.nombre} ${especialista.apellido}</p>
+                            <p><strong>Teléfono:</strong> ${especialista.telefono}</p>
+                            <p><strong>Correo:</strong> ${especialista.email}</p>
+                        </div>
+                    `;
+                });
+            }
+            // Mostrar el modal
+            document.getElementById("modalEspecialistas").style.display = "block";
+        }
+
+        // Código para cerrar el modal
+        document.getElementById("cerrarModal").addEventListener("click", function() {
+            document.getElementById("modalEspecialistas").style.display = "none";
+        });
+    </script>
 </body>
 
 </html>

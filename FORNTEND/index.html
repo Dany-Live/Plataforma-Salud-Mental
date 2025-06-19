@@ -1,5 +1,5 @@
 <!-- Página principal de inicio: index.html -->
-
+ 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -35,8 +35,8 @@
     <!-- CABECERA DE LA PÁGINA -->
     <div class="contenedorEncabezado">
         <div id="logo"><img src="/images/LOGO-PAGINA.png" alt="Logo"></div>
-        <div id="opcion"><button>INFORMACIÓN</button></div>
-        <div id="opcion"><button>CONTACTOS</button></div>
+        <div id="opcion"><button id="informacionBtn">INFORMACIÓN</button></div>
+        <div id="opcion"><button id="contactosBtn">CONTACTOS</button></div>
         <div id="opcion"><button> <a href="paginaCarga.html?next=seleccionCuenta.html">REGISTRARSE</a></button></div>
         <div id="opcion"><button><a href="login.html">MI CUENTA</a></button></div>
     </div>
@@ -46,6 +46,72 @@
 
     <!-- FOOTER DE LA PÁGINA -->
     <footer>©</footer>
+
+    <!-- Recuadro de contactos (inicialmente oculto) -->
+    <div id="contactosPopup" class="contactos-popup">
+        <div class="contactos-contenido">
+            <span class="cerrar-contactos">&times;</span>
+            <h2>Contactos</h2>
+            <p>¿Tienes alguna duda o quieres más información?, contactanos:</p>
+            <ul>
+                <li>Teléfono: +52 5512345678</li>
+                <li>Email: saludmental@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- POPUP DE INFORMACIÓN (oculto inicialmente) -->
+    <div id="informacionPopup" class="popup">
+        <div class="popup-contenido">
+            <span class="cerrar-popup">&times;</span>
+            <h2>Información Importante</h2>
+            <p>El proposito de esta plataforma es proporcionar un medio de apoyo que le permita a los estudiantes de las escuelas superiores de la ciudad de México a mitigar los niveles de estrés académico.</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para controlar ambos popups
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botones
+            const informacionBtn = document.getElementById('informacionBtn');
+            const contactosBtn = document.getElementById('contactosBtn');
+            
+            // Popups
+            const informacionPopup = document.getElementById('informacionPopup');
+            const contactosPopup = document.getElementById('contactosPopup');
+            
+            // Botones de cierre
+            const cerrarPopups = document.querySelectorAll('.cerrar-popup');
+            
+            // Mostrar popup de INFORMACIÓN
+            informacionBtn.addEventListener('click', function() {
+                informacionPopup.style.display = 'block';
+            });
+            
+            // Mostrar popup de CONTACTOS
+            contactosBtn.addEventListener('click', function() {
+                contactosPopup.style.display = 'block';
+            });
+            
+            // Cerrar popups al hacer clic en la "X"
+            cerrarPopups.forEach(function(cerrarBtn) {
+                cerrarBtn.addEventListener('click', function() {
+                    informacionPopup.style.display = 'none';
+                    contactosPopup.style.display = 'none';
+                });
+            });
+            
+            // Cerrar popups si se hace clic fuera del contenido
+            window.addEventListener('click', function(event) {
+                if (event.target === informacionPopup) {
+                    informacionPopup.style.display = 'none';
+                }
+                if (event.target === contactosPopup) {
+                    contactosPopup.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

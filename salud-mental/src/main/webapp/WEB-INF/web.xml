@@ -11,7 +11,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>SaludMentalServlet</servlet-name>
-        <url-pattern>/api/salud</url-pattern>
+        <url-pattern>/SaludMentalServlet</url-pattern>
     </servlet-mapping>
 
     <servlet>

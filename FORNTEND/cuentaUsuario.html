@@ -1,0 +1,72 @@
+<!-- Página principal de inicio: index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Mental</title>
+    <link rel="stylesheet" href="styleCuentaUsuario.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="item1">BIENVENIDO</div>
+
+        <div class="item2">
+            <div class="perfil"><img id="selected-icon" src="/iconos-usuario/HOMBRE1.gif" alt="icono 1" class="main-icon"></div>
+            <div class="icon-menu" id="icon-menu">
+                <img src="/iconos-usuario/HOMBRE2.gif" alt="icono 2">
+                <img src="/iconos-usuario/HOMBRE-LOBO.gif" alt="icono 3">
+                <img src="/iconos-usuario/CAVERNICOLA.gif" alt="icono 4">
+                <img src="/iconos-usuario/MUJER1.gif" alt="icono 5">
+                <img src="/iconos-usuario/MUJER2.gif" alt="icono 6">
+                <img src="/iconos-usuario/MUJER-CAVERNICOLA.gif" alt="icono 6">
+                <img src="/iconos-usuario/MUJER-LOBO.gif" alt="icono 6">
+            </div>
+            <div class="nombreUsuario">NOMBRE</div>
+            <div class="botonInformacion"><button>MAS INFORMACIÓN</button></div>
+        </div>
+
+        <div class="item3">
+            <div class="small-box"><img src="/icons/ICONO-PROGRESO.gif" alt=""><br>PROGRESO</div>
+            <div class="small-box"><img src="/icons/ICONO-CITAS.gif" alt=""><br>CITAS</div>
+            <div class="small-box"><img src="/icons/ICONO-CHAT.gif" alt=""><br>CHAT</div>
+            <div class="small-box"><img src="/icons/ICONO-FACTURA.gif" alt=""><br>FACTURAS</div>
+        </div>
+
+        <!-- ICONO DE REGRESO A LA PÁGINA PRINCIPAL -->
+        <div class="regresoPagina">
+            <img src="/icons/HOME.png" id="icono-estatico">
+            <a href="index.html"><img src="/icons/HOME.gif" id="icono-animado"></a>
+        </div>
+
+        <!-- FOOTER DE LA PÁGINA -->
+        <footer>©</footer>
+    </div>
+
+    <script>
+    const selectedIcon = document.getElementById('selected-icon');
+    const iconMenu = document.getElementById('icon-menu');
+
+    selectedIcon.addEventListener('click', (event) => {
+    event.stopPropagation();
+    iconMenu.classList.toggle('active');
+    });
+
+    iconMenu.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', (event) => {
+        event.stopPropagation();
+        selectedIcon.src = img.src;
+        iconMenu.classList.remove('active');
+    });
+    });
+
+    document.addEventListener('click', function(event) {
+    iconMenu.classList.remove('active');
+    });
+    </script>
+</body>
+
+</html>

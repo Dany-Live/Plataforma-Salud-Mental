@@ -1,8 +1,20 @@
 <!-- Página principal de inicio: index.html -->
 
+<!--
+● <!DOCTYPE html>: Define el tipo de documento y la versión de HTML que se está utilizando: HTML5.
+● <html lang="es">:
+    ◐ <html>: Es el elemento raíz.
+    ◐ lang="es": Especifica que el idioma principal del contenido de la página es el español,
+-->
 <!DOCTYPE html>
 <html lang="es">
 
+<!--
+● <meta charset="UTF-8">: Define la codificación de caracteres del documento como UTF-8.
+● <meta name="viewport" content="width=device-width, initial-scale=1.0">: Configura la vista del navegador en dispositivos móviles. width=device-width ajusta el ancho del viewport al ancho del dispositivo, y initial-scale=1.0 establece el nivel de zoom inicial.
+● <title>Salud Mental</title>: Título de la página
+● <link rel="stylesheet" href="stylesIndex.css">: Enlaza un archivo CSS externo.
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +26,9 @@
     <!-- ANIMACIÓN DE CARGA -->
     <div class="loading show">
         <div class="cargando">
-            <div class="pelotas"></div>
-            <div class="pelotas"></div>
-            <div class="pelotas"></div>
+            <div class="esferas"></div>
+            <div class="esferas"></div>
+            <div class="esferas"></div>
             <span class="texto-cargando">Cargando...</span>
         </div>
     </div>
@@ -27,7 +39,7 @@
     <!-- IMAGEN DE FONDO -->
     <div class="fondoImagen"></div>
 
-    <!-- FONDOS DIVIDIDOS -->
+    <!-- COLORES DE RELLENO DEL FONDO -->
     <div class="fondosDivididos">
         <div class="izquierda"></div>
         <div class="derecha"></div>
@@ -36,9 +48,9 @@
     <!-- CABECERA DE LA PÁGINA -->
     <div class="contenedorEncabezado">
         <div id="logo"><img src="/salud-mental/images/LOGO-PAGINA.png" alt="Logo"></div>
-        <div id="opcion"><button>INFORMACIÓN</button></div>
-        <div id="opcion"><button>CONTACTOS</button></div>
-        <div id="opcion"><button> <a href="paginaCarga.html?next=seleccionCuenta.html">REGISTRARSE</a></button></div>
+        <div id="opcion"><button id="informacionBtn">INFORMACIÓN</button></div>
+        <div id="opcion"><button id="contactosBtn">CONTACTOS</button></div>
+        <div id="opcion"><button><a href="paginaCarga.html?next=seleccionCuenta.html">REGISTRARSE</a></button></div>
         <div id="opcion"><button><a href="paginaCarga.html?next=login.html">MI CUENTA</a></button></div>
     </div>
 
@@ -47,6 +59,64 @@
 
     <!-- FOOTER DE LA PÁGINA -->
     <footer>©</footer>
+
+    <!-- CONTENIDO DE LOS CONTACTOS -->
+    <div id="contactosPopup" class="contactos-popup">
+        <div class="contactos-contenido">
+            <span class="cerrar-contactos">&times;</span>
+            <h2>Contactos</h2>
+            <p>¿Tienes alguna duda o quieres más información?, contactanos:</p>
+            <ul>
+                <li>Teléfono: +52 5512345678</li>
+                <li>Email: saludmental@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTENIDO DE LA INFORMACIÓN -->
+    <div id="informacionPopup" class="popup">
+        <div class="popup-contenido">
+            <span class="cerrar-popup">&times;</span>
+            <h2>Información Importante</h2>
+            <p>El proposito de esta plataforma es proporcionar un medio de apoyo que le permita a los estudiantes de las escuelas superiores de la ciudad de México a mitigar los niveles de estrés académico.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const informacionBtn = document.getElementById('informacionBtn');
+            const contactosBtn = document.getElementById('contactosBtn');
+            const informacionPopup = document.getElementById('informacionPopup');
+            const contactosPopup = document.getElementById('contactosPopup');
+            const cerrarPopups = document.querySelectorAll('.cerrar-popup');
+            
+            informacionBtn.addEventListener('click', function() {
+                informacionPopup.style.display = 'block';
+            });
+            
+            contactosBtn.addEventListener('click', function() {
+                contactosPopup.style.display = 'block';
+            });
+            
+            cerrarPopups.forEach(function(cerrarBtn) {
+                cerrarBtn.addEventListener('click', function() {
+                    informacionPopup.style.display = 'none';
+                    contactosPopup.style.display = 'none';
+                });
+            });
+            
+            window.addEventListener('click', function(event) {
+                if (event.target === informacionPopup) 
+                {
+                    informacionPopup.style.display = 'none';
+                }
+                if (event.target === contactosPopup) 
+                {
+                    contactosPopup.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

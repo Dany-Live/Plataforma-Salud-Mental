@@ -84,7 +84,10 @@ button
     outline: none;
     cursor: pointer;
     padding: 0px 20px 0px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+button:hover { transform: scale(1.05); /* Aumenta el tamaño un 5% */ }
 
 /*Ajustes buscador y boton*/
 .buscador 
@@ -134,7 +137,10 @@ button
     color: white;
     clip-path: inset(10% round 30px);
     padding: 20px 200px 20px 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+#textos:hover { transform: scale(1.05); /* Aumenta el tamaño un 5% */ }
 /******************************************************************************************************/
 
 /******************************AJUSTES DE LOS NÚMEROS DE LAS ACTIVIDADES*******************************/
@@ -155,7 +161,10 @@ button
     color: white;
     clip-path: inset(10% round 30px);
     padding: 20px 30px 20px 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+#numeros:hover { transform: scale(1.05); /* Aumenta el tamaño un 5% */ }
 /******************************************************************************************************/
 
 /****************************************AJUSTE DE LOS ICONOS******************************************/
@@ -196,6 +205,13 @@ footer
     top: 925px;
     left: 0px;
     padding-left: 1890px;
+}
+/*Estilo general del anlcaje URL*/
+a 
+{
+    text-decoration: none;
+    color: inherit;
+    z-index: 1;
 }
 /******************************************************************************************************/
 

@@ -1,8 +1,20 @@
 <!-- Página de información: paginaDeInformacion.html -->
 
+<!--
+● <!DOCTYPE html>: Define el tipo de documento y la versión de HTML que se está utilizando: HTML5.
+● <html lang="es">:
+    ◐ <html>: Es el elemento raíz.
+    ◐ lang="es": Especifica que el idioma principal del contenido de la página es el español,
+-->
 <!DOCTYPE html>
 <html lang="es">
 
+<!--
+● <meta charset="UTF-8">: Define la codificación de caracteres del documento como UTF-8.
+● <meta name="viewport" content="width=device-width, initial-scale=1.0">: Configura la vista del navegador en dispositivos móviles. width=device-width ajusta el ancho del viewport al ancho del dispositivo, y initial-scale=1.0 establece el nivel de zoom inicial.
+● <title>Salud Mental</title>: Título de la página
+● <link rel="stylesheet" href="stylesIndex.css">: Enlaza un archivo CSS externo.
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +27,7 @@
     <div class="cabeceraPagina">
         <div class="buscador"><input type="text" name="query" placeholder="Buscar"></div>
         <div class="iconoRegreso"><a href="paginaPrincipalSesion.html"><img src="/salud-mental/icons/HOME.gif" alt="regreso"></a></div>
-        <div class="iconoUsuario"><a href=""><img src="/salud-mental/icons/ICONO-USUARIO.gif" alt="usuario"></a></div>
+        <div class="iconoUsuario"><a href="cuentaUsuario.html"><img src="/salud-mental/icons/ICONO-USUARIO.gif" alt="usuario"></a></div>
         <div id="opcion"><button>CONTACTOS</button></div>
     </div>
 
@@ -27,10 +39,10 @@
 
     <!-- TEXTOS INFORMATIVOS -->
     <div class="actividadesInformativas">
-        <div id="textos">Técnicas de relajación</div>
-        <div id="textos">Actividades Anti-Estrés</div>
-        <div id="textos">Test de detección de estrés</div>
-        <div id="textos">Fuentes de consulta</div>
+        <div id="textos"><a href="https://www.anahuac.mx/blog/manejo-del-estres-academico-estrategias-para-mantener-el-equilibrio-emocional">Técnicas de relajación</a></div>
+        <div id="textos"><a href="/salud-mental/documents/Manual para el manejo efectivo de estres y ansiedad.pdf">Actividades Anti-Estrés</a></div>
+        <div id="textos"><a href="pruebaEstres.html">Test de detección de estrés</a></div>
+        <div id="textos"><a href="/salud-mental/documents/Guia_Gestion_Estres.pdf">Fuentes de consulta</a></div>
     </div>
 
     <!-- NUMERO DE CADA TEXTO -->

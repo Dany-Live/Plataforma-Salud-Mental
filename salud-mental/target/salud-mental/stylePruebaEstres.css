@@ -1,0 +1,177 @@
+/*
+    * Hoja de estilos de: pruebaEstres.html
+*/
+
+/****************************************FUENTES PERSONALIZADAS****************************************/
+@font-face
+{
+    font-family: 'FuenteRobot';
+    src: url('/salud-mental/fonts/RobotoMonoNerdFont-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuRegular';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'FuenteUbuntuLight';
+    src: url('/salud-mental/fonts/UbuntuNerdFont-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/******************************************************************************************************/
+
+/************************************ESTILO DEL BODY DE LA PÁGINA**************************************/
+body 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'FuenteUbuntuLight';
+}
+/******************************************************************************************************/
+
+/******************************************ESTILO DEL TITULO*******************************************/
+.tituloPagina
+{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 42px;
+}
+/******************************************************************************************************/
+
+/****************************************ESTILO DEL CUESTIONARIO***************************************/
+#cuestionario
+{
+    justify-items: center;
+}
+
+.question 
+{
+    justify-content: center;
+    justify-items: center;
+    border: 1px solid #243386;
+    border-radius: 10px;
+    width: 1200px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+/******************************************************************************************************/
+
+/***************************************ESTILO DEL BOTON DE ENVIO**************************************/
+button
+{ 
+    font-size: 20px;
+    background-color: #243386;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+}
+/******************************************************************************************************/
+
+/*******************************************ESTILO DEL MODAL*******************************************/
+/* Modal */
+.modal 
+{
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: scroll;
+}
+
+.modal-content 
+{
+    background-color: #fefefe;
+    margin: 50px auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+        
+}
+
+.close 
+{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover { color: black; }
+
+#btnResultado
+{
+    padding-bottom: 20px;
+}
+/******************************************************************************************************/
+
+/******************************************ESTILO DEL FOOTER*******************************************/
+footer
+{
+    background-color: #243386;
+    color: white;
+    font-size: 20px;
+    padding: 0px 0px 0px 1200px;
+}
+/******************************************************************************************************/
+
+/**************************************ESTILO DEL BOTON DE REGRESO*************************************/
+.regresoPagina #icono-animado, .regresoPagina #icono-estatico
+{
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.regresoPagina #icono-animado
+{
+  width: 80px; 
+  height: 80px;
+}
+
+.regresoPagina #icono-estatico
+{
+  width: 60px; 
+  height: 60px;
+}
+
+#icono-animado
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.regresoPagina:hover #icono-animado
+{
+  opacity: 1;
+}
+
+.regresoPagina:hover #icono-estatico
+{
+  opacity: 0;
+}
+/******************************************************************************************************/

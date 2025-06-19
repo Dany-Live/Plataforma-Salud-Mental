@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function()
                 else 
                 {
                     img.addEventListener('load', incrementCounterImgs);
-                    img.addEventListener('error', incrementCounterImgs); // Maneja errores de carga
+                    img.addEventListener('error', incrementCounterImgs);
                 }
             });
         }

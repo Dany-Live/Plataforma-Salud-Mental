@@ -112,7 +112,7 @@ body
     font-size: 25px;
     display: grid;
     justify-content: center;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 0px 150px;
 }
 
@@ -136,6 +136,21 @@ select
     padding-left: 10px;
     margin: 0px;
 }
+
+/* Estilos para mensajes de error */
+.error-mensaje 
+{
+    color: #d32f2f;
+    font-size: 0.75rem;
+    margin-top: 3px;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+}
+
+input:invalid, select:invalid { border: 1px solid #d32f2f; }
+
+input:valid, select:valid { border: 1px solid #2e7d32; }
 /******************************************************************************************************/
 
 /**************************ESTILO DE LOS TERMINOS Y CONDICIONES DE LA CUENTA***************************/
@@ -212,6 +227,12 @@ a { color: inherit; }
     position: absolute;
     top: 5%;
     left: 5%;
+}
+
+.iconoRegreso img
+{
+    width: 100px;
+    height: 100px;
 }
 /******************************************************************************************************/
 

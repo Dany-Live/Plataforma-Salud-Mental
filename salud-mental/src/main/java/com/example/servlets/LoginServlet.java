@@ -12,34 +12,63 @@ public class LoginServlet extends HttpServlet
     {
         String correo = request.getParameter("correo");
         String contrasena = request.getParameter("contrasena");
+        String tipoUsuario = null;
 
-        try (Connection conn = DatabaseUtil.getConnection())
+        try (Connection conn = DatabaseUtil.getConnection()) 
         {
-            // Consulta para verificar credenciales
-            String sql = "SELECT * FROM usuarios WHERE email = ? AND contrasena = ?";
-            PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1, correo);
-            statement.setString(2, contrasena);
+            // 1. Primero verifica en la tabla usuarios
+            String sqlUsuarios = "SELECT * FROM usuarios WHERE email = ? AND contrasena = ?";
+            PreparedStatement stmtUsuarios = conn.prepareStatement(sqlUsuarios);
+            stmtUsuarios.setString(1, correo);
+            stmtUsuarios.setString(2, contrasena);
+            ResultSet rsUsuarios = stmtUsuarios.executeQuery();
 
-            ResultSet rs = statement.executeQuery();
-
-            if (rs.next()) 
+            if (rsUsuarios.next()) 
             {
-                //Credenciales válidas
-                HttpSession session = request.getSession();
-                session.setAttribute("usuario", correo); // Guarda el correo en sesión
-                response.sendRedirect("paginaPrincipalSesion.html"); // Redirige a página privada
+                tipoUsuario = "usuario";
             } 
-            else
+            else 
             {
-                //Credenciales inválidas
-                response.sendRedirect("login.html?error=1"); // Redirige con parámetro de error
+                // 2. Si no encuentra en usuarios, verifica en profesionistas
+                String sqlProfesionistas = "SELECT * FROM profesionistas WHERE email = ? AND contrasena = ?";
+                PreparedStatement stmtProfesionistas = conn.prepareStatement(sqlProfesionistas);
+                stmtProfesionistas.setString(1, correo);
+                stmtProfesionistas.setString(2, contrasena);
+                ResultSet rsProfesionistas = stmtProfesionistas.executeQuery();
+
+                if (rsProfesionistas.next()) 
+                {
+                    tipoUsuario = "profesionista";
+                }
+            }
+
+            if (tipoUsuario != null) 
+            {
+                // Credenciales válidas
+                HttpSession session = request.getSession();
+                session.setAttribute("usuario", correo);
+                session.setAttribute("tipoUsuario", tipoUsuario); // Guarda el tipo de usuario
+                
+                // Redirige según el tipo de usuario
+                if ("profesionista".equals(tipoUsuario)) 
+                {
+                    response.sendRedirect("paginaCarga.html?next=paginaPrincipalSesion.html");
+                } 
+                else 
+                {
+                    response.sendRedirect("paginaCarga.html?next=paginaPrincipalSesion.html");
+                }
+            } 
+            else 
+            {
+                // Credenciales inválidas
+                response.sendRedirect("login.html?error=1");
             }
         } 
-        catch (SQLException e)
+        catch (SQLException e) 
         {
             e.printStackTrace();
-            response.sendRedirect("login.html?error=2"); // Error de base de datos
+            response.sendRedirect("login.html?error=2");
         }
     }
 }

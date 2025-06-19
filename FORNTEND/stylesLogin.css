@@ -171,8 +171,9 @@ button
     border-radius: 50px;
     text-decoration: none;
     outline: none;
-    cursor: pointer;
     padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .botonDeSesion
@@ -182,6 +183,8 @@ button
     left: 25%;
     transform: translate(-50%, -50%);
 }
+
+button:hover { transform: scale(1.05); /* Aumenta el tamaño un 5% */ }
 /******************************************************************************************************/
 
 /************************************ESTILO DEL REGISTRO DE USUARIO************************************/
@@ -200,7 +203,7 @@ button
 /******************************************************************************************************/
 
 /*******************************************BOTON DE REGRESO*******************************************/
-.regresoPagina
+.regresoPagina #icono-animado, .regresoPagina #icono-estatico
 {
     position: absolute;
     top: 85%;
@@ -208,10 +211,37 @@ button
     transform: translate(-50%, -50%);
 }
 
-.regresoPagina img
+.regresoPagina #icono-animado
 {
     width: 80px; 
     height: 80px;
+}
+
+.regresoPagina #icono-estatico
+{
+    width: 60px; 
+    height: 60px;
+}
+
+#icono-animado
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.regresoPagina:hover #icono-animado
+{
+  opacity: 1;
+}
+
+.regresoPagina:hover #icono-estatico
+{
+  opacity: 0;
 }
 /******************************************************************************************************/
 

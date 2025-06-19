@@ -136,6 +136,18 @@ select
     padding-left: 10px;
     margin: 0px;
 }
+
+.error-mensaje 
+{
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+input:invalid, select:invalid { border-color: red;
+}
+
+input:valid, select:valid { border-color: green; }
 /******************************************************************************************************/
 
 /**************************ESTILO DE LOS TERMINOS Y CONDICIONES DE LA CUENTA***************************/
@@ -212,6 +224,12 @@ a { color: inherit; }
     position: absolute;
     top: 5%;
     left: 5%;
+}
+
+.iconoRegreso img
+{
+    width: 100px;
+    height: 100px;
 }
 /******************************************************************************************************/
 

@@ -1,0 +1,89 @@
+<!-- Página principal de inicio: index.html -->
+
+<!--
+● <!DOCTYPE html>: Define el tipo de documento y la versión de HTML que se está utilizando: HTML5.
+● <html lang="es">:
+    ◐ <html>: Es el elemento raíz.
+    ◐ lang="es": Especifica que el idioma principal del contenido de la página es el español,
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+● <meta charset="UTF-8">: Define la codificación de caracteres del documento como UTF-8.
+● <meta name="viewport" content="width=device-width, initial-scale=1.0">: Configura la vista del navegador en dispositivos móviles. width=device-width ajusta el ancho del viewport al ancho del dispositivo, y initial-scale=1.0 establece el nivel de zoom inicial.
+● <title>Salud Mental</title>: Título de la página
+● <link rel="stylesheet" href="stylesIndex.css">: Enlaza un archivo CSS externo.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Mental</title>
+    <link rel="stylesheet" href="styleCuentaUsuario.css">
+</head>
+
+<body>
+    <!-- CONTENEDOR DE RODA LA PÁGINA -->
+    <div class="contenedor">
+        <!-- TITULO DE LA PÁGINA -->
+        <div class="item1">BIENVENIDO</div>
+
+        <!-- SELECCIÓN DE ICONO DE PERFIL -->
+        <div class="item2">
+            <div class="perfil"><img id="selected-icon" src="/salud-mental/iconos-usuario/HOMBRE1.gif" alt="icono 1" class="main-icon"></div>
+            <div class="icon-menu" id="icon-menu">
+                <img src="/salud-mental/iconos-usuario/HOMBRE2.gif" alt="icono 2">
+                <img src="/salud-mental/iconos-usuario/HOMBRE-LOBO.gif" alt="icono 3">
+                <img src="/salud-mental/iconos-usuario/CAVERNICOLA.gif" alt="icono 4">
+                <img src="/salud-mental/iconos-usuario/MUJER1.gif" alt="icono 5">
+                <img src="/salud-mental/iconos-usuario/MUJER2.gif" alt="icono 6">
+                <img src="/salud-mental/iconos-usuario/MUJER-CAVERNICOLA.gif" alt="icono 6">
+                <img src="/salud-mental/iconos-usuario/MUJER-LOBO.gif" alt="icono 6">
+            </div>
+            <div class="nombreUsuario">NOMBRE</div>
+            <div class="botonInformacion"><button>MAS INFORMACIÓN</button></div>
+        </div>
+
+        <!-- ACCIONES DEL PERFIL -->
+        <div class="item3">
+            <div class="small-box"><img src="/salud-mental/icons/ICONO-PROGRESO.gif" alt=""><br>PROGRESO</div>
+            <div class="small-box"><img src="/salud-mental/icons/ICONO-CITAS.gif" alt=""><br>CITAS</div>
+            <div class="small-box"><img src="/salud-mental/icons/ICONO-CHAT.gif" alt=""><br>CHAT</div>
+            <div class="small-box"><img src="/salud-mental/icons/ICONO-FACTURA.gif" alt=""><br>FACTURAS</div>
+        </div>
+
+        <!-- ICONO DE REGRESO A LA PÁGINA PRINCIPAL -->
+        <div class="regresoPagina">
+            <img src="/salud-mental/icons/HOME.png" id="icono-estatico">
+            <a href="paginaPrincipalSesion.html"><img src="/salud-mental/icons/HOME.gif" id="icono-animado"></a>
+        </div>
+
+        <!-- FOOTER DE LA PÁGINA -->
+        <footer>©</footer>
+    </div>
+
+    <!-- SCRIPT PARA SELECCIONAR EL ICONO DEL PERFIL -->
+    <script>
+    const selectedIcon = document.getElementById('selected-icon');
+    const iconMenu = document.getElementById('icon-menu');
+
+    selectedIcon.addEventListener('click', (event) => {
+    event.stopPropagation();
+    iconMenu.classList.toggle('active');
+    });
+
+    iconMenu.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', (event) => {
+        event.stopPropagation();
+        selectedIcon.src = img.src;
+        iconMenu.classList.remove('active');
+    });
+    });
+
+    document.addEventListener('click', function(event) {
+    iconMenu.classList.remove('active');
+    });
+    </script>
+</body>
+
+</html>

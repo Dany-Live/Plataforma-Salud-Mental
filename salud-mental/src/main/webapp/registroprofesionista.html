@@ -1,8 +1,20 @@
 <!-- Página para registrar los datos de los especialistas: registroProfesional.html -->
 
+<!--
+● <!DOCTYPE html>: Define el tipo de documento y la versión de HTML que se está utilizando: HTML5.
+● <html lang="es">:
+    ◐ <html>: Es el elemento raíz.
+    ◐ lang="es": Especifica que el idioma principal del contenido de la página es el español,
+-->
 <!DOCTYPE html>
 <html lang="es">
 
+<!--
+● <meta charset="UTF-8">: Define la codificación de caracteres del documento como UTF-8.
+● <meta name="viewport" content="width=device-width, initial-scale=1.0">: Configura la vista del navegador en dispositivos móviles. width=device-width ajusta el ancho del viewport al ancho del dispositivo, y initial-scale=1.0 establece el nivel de zoom inicial.
+● <title>Salud Mental</title>: Título de la página
+● <link rel="stylesheet" href="stylesIndex.css">: Enlaza un archivo CSS externo.
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +77,7 @@
             <div>
                 <label>INSTITUCIÓN</label>
                 <br>
-                <input type="text" placeholder="" name="instituto" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]{5,50}" required>
+                <input type="text" placeholder="" name="instituto" pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]{3,50}" required>
             </div>
             <div>
                 <label>CONTRASEÑA</label>
@@ -78,6 +90,15 @@
                 <select id="selector" name="opcion" required>
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
+                </select>
+            </div>
+            <div>
+                <label>ESPECIALIDAD</label>
+                <br>
+                <select id="selector" name="especialista" required>
+                    <option value="Psicologo">Psicólogo</option>
+                    <option value="MedicoPrimario">Médico Primario</option>
+                    <option value="Terapeuta">Terapeuta</option>
                 </select>
             </div>
         </div>
@@ -97,6 +118,155 @@
 
     <!-- BOTON DE REGRESO -->
     <div class="iconoRegreso"><a href="index.html"><img src="/salud-mental/icons/HOME.gif"></a></div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita el envío automático
+            
+            // Validar todos los campos
+            if (validarFormulario()) {
+                // Si todo está correcto, enviar el formulario
+                form.submit();
+            }
+        });
+        
+        function validarFormulario() {
+            let valido = true;
+            
+            // Validar nombres
+            const nombre = document.querySelector('input[name="nombre"]');
+            if (!validarNombreApellido(nombre.value)) {
+                mostrarError(nombre, 'Ingresa un nombre válido (4-50 letras)');
+                valido = false;
+            } else {
+                limpiarError(nombre);
+            }
+            
+            // Validar apellidos
+            const apellido = document.querySelector('input[name="apellido"]');
+            if (!validarNombreApellido(apellido.value)) {
+                mostrarError(apellido, 'Ingresa un apellido válido (10-50 letras)');
+                valido = false;
+            } else {
+                limpiarError(apellido);
+            }
+            
+            // Validar fecha de nacimiento
+            const fechaNacimiento = document.querySelector('input[name="fechanacimiento"]');
+            if (!validarFechaNacimiento(fechaNacimiento.value)) {
+                mostrarError(fechaNacimiento, 'Debes tener al menos 18 años para registrarte como profesional');
+                valido = false;
+            } else {
+                limpiarError(fechaNacimiento);
+            }
+            
+            // Validar número celular
+            const celular = document.querySelector('input[name="numeromovil"]');
+            if (!validarCelular(celular.value)) {
+                mostrarError(celular, 'Ingresa un número de 10 dígitos');
+                valido = false;
+            } else {
+                limpiarError(celular);
+            }
+            
+            // Validar cédula profesional
+            const cedula = document.querySelector('input[name="cedula"]');
+            if (!validarCedula(cedula.value)) {
+                mostrarError(cedula, 'Ingresa una cédula profesional válida (8-15 caracteres alfanuméricos)');
+                valido = false;
+            } else {
+                limpiarError(cedula);
+            }
+            
+            // Validar correo
+            const correo = document.querySelector('input[name="correo"]');
+            if (!validarCorreo(correo.value)) {
+                mostrarError(correo, 'Ingresa un correo válido');
+                valido = false;
+            } else {
+                limpiarError(correo);
+            }
+            
+            // Validar institución
+            const instituto = document.querySelector('input[name="instituto"]');
+            if (!validarInstituto(instituto.value)) {
+                mostrarError(instituto, 'Ingresa una institución válida (3-50 caracteres)');
+                valido = false;
+            } else {
+                limpiarError(instituto);
+            }
+            
+            // Validar contraseña
+            const contrasena = document.querySelector('input[name="contrasena"]');
+            if (!validarContrasena(contrasena.value)) {
+                mostrarError(contrasena, 'La contraseña debe tener 8-20 caracteres');
+                valido = false;
+            } else {
+                limpiarError(contrasena);
+            }
+            
+            return valido;
+        }
+        
+        // Funciones de validación específicas
+        function validarNombreApellido(valor) {
+            const regex = /^[A-Za-zÁÉÍÓÚÑáéíóúñ ]+$/;
+            return regex.test(valor) && valor.length >= 4 && valor.length <= 50;
+        }
+        
+        function validarFechaNacimiento(fecha) {
+            const fechaNac = new Date(fecha);
+            const hoy = new Date();
+            const edadMinima = new Date(hoy.getFullYear() - 18, hoy.getMonth(), hoy.getDate());
+            return fechaNac <= edadMinima;
+        }
+        
+        function validarCelular(numero) {
+            const regex = /^[0-9]{10}$/;
+            return regex.test(numero);
+        }
+        
+        function validarCedula(cedula) {
+            const regex = /^[A-Za-z0-9]{8,15}$/;
+            return regex.test(cedula);
+        }
+        
+        function validarInstituto(valor) {
+            const regex = /^[A-Za-zÁÉÍÓÚÑáéíóúñ0-9 ]+$/;
+            return regex.test(valor) && valor.length >= 3 && valor.length <= 50;
+        }
+        
+        function validarCorreo(correo) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(correo);
+        }
+        
+        function validarContrasena(contrasena) {
+            return contrasena.length >= 8 && contrasena.length <= 20;
+        }
+        
+        // Funciones para mostrar/ocultar errores
+        function mostrarError(campo, mensaje) {
+            limpiarError(campo);
+            const error = document.createElement('div');
+            error.className = 'error-mensaje';
+            error.textContent = mensaje;
+            campo.parentNode.appendChild(error);
+            campo.style.borderColor = 'red';
+        }
+        
+        function limpiarError(campo) {
+            const error = campo.parentNode.querySelector('.error-mensaje');
+            if (error) {
+                campo.parentNode.removeChild(error);
+            }
+            campo.style.borderColor = '';
+        }
+    });
+    </script>
 </body>
 
 </html>
