@@ -39,8 +39,8 @@
 
     <!-- TEXTOS INFORMATIVOS -->
     <div class="actividadesInformativas">
-        <div id="textos"><a href="https://www.anahuac.mx/blog/manejo-del-estres-academico-estrategias-para-mantener-el-equilibrio-emocional">Técnicas de relajación</a></div>
-        <div id="textos"><a href="/salud-mental/documents/Manual para el manejo efectivo de estres y ansiedad.pdf">Actividades Anti-Estrés</a></div>
+        <div id="textos"><a href="/salud-mental/documents/Manual para el manejo efectivo de estres y ansiedad.pdf">Técnicas de relajación</a></div>
+        <div id="textos"><a href="/salud-mental/documents/Infografia-Jakobson.pdf">Actividades Anti-Estrés</a></div>
         <div id="textos"><a href="pruebaEstres.html">Test de detección de estrés</a></div>
         <div id="textos"><a href="/salud-mental/documents/Guia_Gestion_Estres.pdf">Fuentes de consulta</a></div>
     </div>
@@ -55,9 +55,9 @@
 
     <!-- ELEMENTOS PRINCIPALES -->
     <div class="iconosPrincipales">
-        <div class="progresoIcon"><center><img src="/salud-mental/icons/ICONO-PROGRESO.gif" alt="iconoprogreso"></center></div>
-        <div class="chatIcon"><center><img src="/salud-mental/icons/ICONO-CHAT.gif" alt="iconochat"></center></div>
-        <div class="citasIcon"><center><img src="/salud-mental/icons/ICONO-CITAS.gif" alt="iconocitas"></center></div>
+        <div class="progresoIcon" id="btnProgreso"><center><img src="/salud-mental/icons/ICONO-PROGRESO.gif" alt="iconoprogreso"></center></div>
+        <div class="chatIcon" id="btnChat"><center><img src="/salud-mental/icons/ICONO-CHAT.gif" alt="iconochat"></center></div>
+        <div class="citasIcon" id="btnCitas"><center><img src="/salud-mental/icons/ICONO-CITAS.gif" alt="iconocitas"></center></div>
         <div id="nombresIconosPrincipales"><center>PROGRESO</center></div>
         <div id="nombresIconosPrincipales"><center>CHAT</center></div>
         <div id="nombresIconosPrincipales"><center>CITAS</center></div>
@@ -65,6 +65,54 @@
 
     <!-- FOOTER DE LA PÁGINA -->
     <footer>©</footer>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="cerrarModal">&times;</span>
+            <h2 id="tituloModal"></h2>
+            <p id="contenidoModal"></p>
+        </div>
+    </div>
+
+    <script>
+        // Obtenemos los elementos
+        const modal = document.getElementById("modal");
+        const cerrarModal = document.getElementById("cerrarModal");
+        const tituloModal = document.getElementById("tituloModal");
+        const contenidoModal = document.getElementById("contenidoModal");
+
+        // Funciones de cada botón
+        document.getElementById("btnProgreso").onclick = function() {
+            tituloModal.innerText = "Progreso del Usuario";
+            contenidoModal.innerHTML = "Aquí se mostrará el seguimiento de tus avances y niveles de estrés registrados.";
+            modal.style.display = "block";
+        }
+
+        document.getElementById("btnChat").onclick = function() {
+            tituloModal.innerText = "Chat de Apoyo";
+            contenidoModal.innerHTML = "Puedes comunicarte con nuestros especialistas para recibir orientación emocional.";
+            modal.style.display = "block";
+        }
+
+        document.getElementById("btnCitas").onclick = function() {
+            tituloModal.innerText = "Gestión de Citas";
+            contenidoModal.innerHTML = "Aquí podrás gestionar, reservar o cancelar tus citas con los especialistas.";
+            modal.style.display = "block";
+        }
+
+        // Cierre del modal
+        cerrarModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Si el usuario da click fuera del modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>

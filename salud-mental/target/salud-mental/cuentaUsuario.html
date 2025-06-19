@@ -1,4 +1,4 @@
-<!-- Página principal de inicio: index.html -->
+<!-- Página principal de inicio: cuentaUsuario.html -->
 
 <!--
 ● <!DOCTYPE html>: Define el tipo de documento y la versión de HTML que se está utilizando: HTML5.
@@ -40,16 +40,16 @@
                 <img src="/salud-mental/iconos-usuario/MUJER-CAVERNICOLA.gif" alt="icono 6">
                 <img src="/salud-mental/iconos-usuario/MUJER-LOBO.gif" alt="icono 6">
             </div>
-            <div class="nombreUsuario">NOMBRE</div>
-            <div class="botonInformacion"><button>MAS INFORMACIÓN</button></div>
+            <div class="nombreUsuario" id="nombreUsuario">Cargando nombre...</div>
+            <div class="botonInformacion" id="btnMasInfo"><button>MAS INFORMACIÓN</button></div>
         </div>
 
         <!-- ACCIONES DEL PERFIL -->
         <div class="item3">
-            <div class="small-box"><img src="/salud-mental/icons/ICONO-PROGRESO.gif" alt=""><br>PROGRESO</div>
-            <div class="small-box"><img src="/salud-mental/icons/ICONO-CITAS.gif" alt=""><br>CITAS</div>
-            <div class="small-box"><img src="/salud-mental/icons/ICONO-CHAT.gif" alt=""><br>CHAT</div>
-            <div class="small-box"><img src="/salud-mental/icons/ICONO-FACTURA.gif" alt=""><br>FACTURAS</div>
+            <div class="small-box" id="btnProgreso"><img src="/salud-mental/icons/ICONO-PROGRESO.gif" alt=""><br>PROGRESO</div>
+            <div class="small-box" id="btnCitas"><img src="/salud-mental/icons/ICONO-CITAS.gif" alt=""><br>CITAS</div>
+            <div class="small-box" id="btnChat"><img src="/salud-mental/icons/ICONO-CHAT.gif" alt=""><br>CHAT</div>
+            <div class="small-box" id="btnFacturas"><img src="/salud-mental/icons/ICONO-FACTURA.gif" alt=""><br>FACTURAS</div>
         </div>
 
         <!-- ICONO DE REGRESO A LA PÁGINA PRINCIPAL -->
@@ -60,6 +60,15 @@
 
         <!-- FOOTER DE LA PÁGINA -->
         <footer>©</footer>
+    </div>
+
+    <!-- MODAL GENERAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="cerrarModal">&times;</span>
+            <h2 id="tituloModal"></h2>
+            <p id="contenidoModal"></p>
+        </div>
     </div>
 
     <!-- SCRIPT PARA SELECCIONAR EL ICONO DEL PERFIL -->
@@ -83,6 +92,63 @@
     document.addEventListener('click', function(event) {
     iconMenu.classList.remove('active');
     });
+    </script>
+
+    <!-- SCRIPT PARA LOS MODALES -->
+    <script>
+        const modal = document.getElementById("modal");
+        const cerrarModal = document.getElementById("cerrarModal");
+        const tituloModal = document.getElementById("tituloModal");
+        const contenidoModal = document.getElementById("contenidoModal");
+
+        // Asignamos funcionalidad a cada botón
+        document.getElementById("btnProgreso").onclick = function() {
+            mostrarModal("Progreso", "Aquí podrás ver el avance de tus actividades, cuestionarios y evolución en el manejo del estrés.");
+        }
+
+        document.getElementById("btnCitas").onclick = function() {
+            mostrarModal("Citas", "Aquí puedes gestionar tus citas: reservar, cancelar o ver el historial de citas con especialistas.");
+        }
+
+        document.getElementById("btnChat").onclick = function() {
+            mostrarModal("Chat", "Accede al chat para comunicarte directamente con nuestros especialistas y recibir orientación.");
+        }
+
+        document.getElementById("btnFacturas").onclick = function() {
+            mostrarModal("Facturas", "Consulta y descarga las facturas de tus sesiones y servicios adquiridos.");
+        }
+
+        document.getElementById("btnMasInfo").onclick = function() {
+            mostrarModal("Más Información", "Aquí encontrarás información general sobre el programa de salud mental, sus objetivos y recomendaciones.");
+        }
+
+        function mostrarModal(titulo, contenido) {
+            tituloModal.innerText = titulo;
+            contenidoModal.innerText = contenido;
+            modal.style.display = "block";
+        }
+
+        cerrarModal.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        fetch('/salud-mental/usuario-info')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('nombreUsuario').innerText = data.nombre;
+            })
+            .catch(error => {
+                console.error('Error al obtener nombre:', error);
+                document.getElementById('nombreUsuario').innerText = "Error";
+            });
     </script>
 </body>
 

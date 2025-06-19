@@ -13,6 +13,7 @@ public class LoginServlet extends HttpServlet
         String correo = request.getParameter("correo");
         String contrasena = request.getParameter("contrasena");
         String tipoUsuario = null;
+        String nombreUsuario = null;
 
         try (Connection conn = DatabaseUtil.getConnection()) 
         {
@@ -26,6 +27,7 @@ public class LoginServlet extends HttpServlet
             if (rsUsuarios.next()) 
             {
                 tipoUsuario = "usuario";
+                nombreUsuario = rsUsuarios.getString("nombre");  // ← Obtener nombre desde tabla usuarios
             } 
             else 
             {
@@ -39,6 +41,7 @@ public class LoginServlet extends HttpServlet
                 if (rsProfesionistas.next()) 
                 {
                     tipoUsuario = "profesionista";
+                    nombreUsuario = rsProfesionistas.getString("nombre");  // ← Obtener nombre desde profesionistas
                 }
             }
 
@@ -47,17 +50,11 @@ public class LoginServlet extends HttpServlet
                 // Credenciales válidas
                 HttpSession session = request.getSession();
                 session.setAttribute("usuario", correo);
-                session.setAttribute("tipoUsuario", tipoUsuario); // Guarda el tipo de usuario
+                session.setAttribute("tipoUsuario", tipoUsuario);
+                session.setAttribute("nombreUsuario", nombreUsuario);  // ← Guardar nombre en sesión
                 
                 // Redirige según el tipo de usuario
-                if ("profesionista".equals(tipoUsuario)) 
-                {
-                    response.sendRedirect("paginaCarga.html?next=paginaPrincipalSesion.html");
-                } 
-                else 
-                {
-                    response.sendRedirect("paginaCarga.html?next=paginaPrincipalSesion.html");
-                }
+                response.sendRedirect("paginaCarga.html?next=paginaPrincipalSesion.html");
             } 
             else 
             {
